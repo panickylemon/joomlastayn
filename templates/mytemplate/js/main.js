@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 
 
 function windowSize() {
-    if (jQuery(window).width() >= '541') {
+    if (jQuery(window).width() >= '654') {
         jQuery('.burger_menu').hide();
     }
     else  {

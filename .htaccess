@@ -25,6 +25,8 @@ Options -Indexes
 ## Mod_rewrite in use.
 
 RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^www.site\.ru
+#RewriteRule ^(.*)$ http://site.ru/$1 [R=301,L]
 
 ## Begin - Rewrite rules to block out some common exploits.
 # If you experience problems on your site block out the operations listed below
@@ -74,3 +76,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
 #
 ## End - Joomla! core SEF Section.
+
+
+php_value display_errors 1

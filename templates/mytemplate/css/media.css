@@ -1,9 +1,23 @@
+@media screen and (max-width: 900px) {
+	.menu_left{
+		padding: 15px 0 0 20px;
+		width: 33%;
+	}
+
+	.menu_right{
+		padding: 15px 20px 0 0;
+		width: 38%;
+	}
+
+}
+
+
+
 @media screen and (max-width: 740px) {
 	.icons_social_networks{
 		width: 35%;
 	}
 }
-
 
 
 @media screen and (max-width: 560px) {
@@ -35,8 +49,12 @@
 	}
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 670px) {
 	.menu{
+		display: none;
+	}
+
+	.cart_header_text{
 		display: none;
 	}
 
@@ -50,9 +68,6 @@
 		margin-right: 3%;
 	}
 
-	header{
-		padding: 3px 0 2px;
-	}
 
 	.logo img {
 		max-width: 70px;

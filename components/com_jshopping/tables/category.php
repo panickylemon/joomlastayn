@@ -162,6 +162,8 @@ class jshopCategory extends JTableAvto implements jshopProductListInterface{
                   $adv_from
                   WHERE pr_cat.category_id = '".$this->_db->escape($this->category_id)."' AND prod.product_publish = '1' ".$adv_query." ".$order_query;
 
+
+
         if ($limit){
             $this->_db->setQuery($query, $limitstart, $limit);
         }else{
