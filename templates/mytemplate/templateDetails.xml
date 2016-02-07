@@ -12,6 +12,7 @@
 	<description>TPL_MYTEMPLATE_XML_DESCRIPTION</description>
 
    <files>
+        <folder>html</folder>
         <folder>css</folder>
 		<folder>fonts</folder>
         <folder>images</folder>
