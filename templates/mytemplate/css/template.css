@@ -66,10 +66,11 @@ body {
 }
 
 .wrap_content_all_page{
-	border: 0px solid #ff582c;
+	border-top: 2px solid darkred;
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
+	padding-top: 10px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -436,7 +437,7 @@ footer {
 	width: 100%;
 	max-width: 1370px;
 	/*max-height: 565px;*/
-	margin:  0 auto 2px;
+	margin:  -15px auto 2px;
 }
 
 .wrap_main_categories{
@@ -515,11 +516,6 @@ footer {
 }
 
 
-.rr{
-	width: 300px;
-	height: 200px;
-	background: indianred;
-}
 
 
 /*login_page*/
@@ -528,27 +524,108 @@ footer {
 }
 
 
-/*list-products*/
+/*shop-page*/
+
+.jshop h1{
+	display: none;
+}
+
+.link_all_categories_display{
+	width: 122px;
+	cursor: pointer;
+	display: none;
+ }
+
+
+.link_all_categories_display a:hover{
+	text-decoration: none;
+}
+
+.all_categories_display{
+	border: 1px solid #4cae4c;
+	background: #5cb85c url("/joomlastayn/templates/mytemplate/images/arrow486.png") no-repeat 97% 58%;
+	background-size: 10px;
+	padding: 5px;
+	color: white;
+}
 
 .jshop_mystyle{
-	border: 1px solid #ff582c;
+	border: 0px solid #ff582c;
 	float: right;
-	width: 80%;
+	/*width: 80%;*/
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
 
 .list_categories{
+	font-family: "OpenSansCond-Bold", sans-serif;
+	font-size: 17px;
 	border: 0px solid #37ff45;
 	float: left;
-	width: 20%;
-	min-width: 150px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
 
-.jshop h1{
-	display: none;
+.list_categories a{
+	 color:black;
+ }
+
+
+.list_categories a:hover{
+	text-decoration: none;
 }
+
+.list_categories li{
+	list-style: none;
+	border-top: 1px solid #efefef;
+
+}
+
+.list_categories li a div{
+	min-height: 30px;
+	padding-top: 3px;
+	/*border: 1px solid #4938ef;*/
+	padding-left: 5px;
+}
+
+.list_categories li a div:hover{
+	background: #efefef;
+}
+
+.list_categories>ul>li:last-child{
+	border-bottom: 1px solid #efefef;
+}
+
+.list_categories>ul>li>ul>li>a>div{
+	font-size: 15px;
+	padding-left: 15px;
+}
+
+/*.list_categories a div{*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+/*}*/
+
+/*.list_categories .odcat tr td.odsubcat-2{*/
+	/*font-size: 15px;*/
+/*}*/
+
+/*.list_categories td:hover{*/
+	/*background: #c9c9c9;*/
+/*}*/
+
+/*.list_categories td a:hover{*/
+	/*text-decoration: none;*/
+/*}*/
+
+/*.list_categories td{*/
+	/*border-top: 1px solid #c9c9c9;*/
+	/*border-bottom: 1px solid #c9c9c9;*/
+/*}*/
+
+/*.list_categories .odcat{*/
+	/*border: none;*/
+/*}*/
+

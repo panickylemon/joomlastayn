@@ -33,3 +33,22 @@ jQuery(window).resize(function(){
 });
 // вызовем событие resize
 jQuery(window).resize();
+
+
+
+
+jQuery(document).ready(function($){
+
+    $(".link_all_categories_display").click(function() {
+        $(".odcat").slideToggle("fast");
+    });
+
+});
+
+
+function windowSize() {
+    if (jQuery(window).width() >= '770') {
+        jQuery('.odcat').show();
+    }
+}
+jQuery(window).on('load resize', windowSize);

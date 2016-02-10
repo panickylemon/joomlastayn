@@ -7,15 +7,17 @@ $menu = $app->getMenu();
 $lang = JFactory::getLanguage();
 
 $template_url = $this->baseurl . '/templates/' . $this->template;
+$doc->addStyleSheet($template_url . '/bootstrap/css/bootstrap.min.css');
 $doc->addStyleSheet($template_url . '/css/template.css');
 $doc->addStyleSheet($template_url . '/css/media.css');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery-1.12.0.min.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . 'bootstrap/js/bootstrap.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/main.js', 'text/javascript');
 
 $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:jdoc="http://www.w3.org/2001/XInclude">
 <head>
 
@@ -104,10 +106,13 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 
 	<div class="wrap_content_all_page">
 		<jdoc:include type="modules" name="form-1"/>
-		<jdoc:include type="modules" name="search"/>
-		<div class="list_categories">
+
+<!--		<jdoc:include type="modules" name="search"/>-->
+
+		<div class="list_categories col-md-2 col-sm-3 col-xs-12">
 			<jdoc:include type="modules" name="categories"/>
 		</div>
+
 		<jdoc:include type="modules" name="feedback"/>
 
 
