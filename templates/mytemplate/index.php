@@ -108,6 +108,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 		<div class="list_categories">
 			<jdoc:include type="modules" name="categories"/>
 		</div>
+		<jdoc:include type="modules" name="feedback"/>
 
 
 		<div class="main-heading"></div>
