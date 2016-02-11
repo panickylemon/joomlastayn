@@ -1,3 +1,9 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body{
+		margin-right: 16px;
+	}
+}
+
 @media screen and (max-width: 900px) {
 	.menu_left {
 		padding: 15px 0 0 20px;
@@ -31,6 +37,20 @@
 	.list_categories{
 		margin-top: -35px;
 		padding-left: 5px;
+	}
+	.form-horizontal .box_products_sorting .control-label{
+		margin-top: 5px;
+		margin-left: 10px;
+	}
+	.form-horizontal .box_products_count_to_page .control-label{
+margin-left: 20px;
+	}
+
+	.form-horizontal .box_products_count_to_page .control-label{
+		margin-top: 5px;
+	}
+	.block_sorting_count_to_page .box_products_count_to_page{
+		width: 160px;
 	}
 }
 
@@ -116,6 +136,35 @@
 		font-size: 12px;
 		height: 20px;
 	}
+
+
+	.sortind_wrapper{
+		width: 310px;
+		margin-bottom: 5px;
+	}
+	.block_sorting_count_to_page{
+		float: right;
+		margin-right: 0px;
+	}
+	.block_sorting_count_to_page .box_products_sorting{
+		float: none;
+		margin-right: -8px;
+	}
+
+	.block_sorting_count_to_page .box_products_count_to_page{
+		float: right;
+		margin: 5px -24px -5px 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.form-horizontal .box_products_sorting .control-label{
+		margin-top: 0px;
+	}
+
+	.form-horizontal .box_products_count_to_page .control-label{
+		margin-top: 0px;
+	}
 }
 
 @media screen and (max-width: 470px) {
@@ -138,8 +187,12 @@
 	.inputbox{
 		width: 125px;
 	}
-	.wrapper_search{
-		width: 154px;
+	.wrapper_search .inputbox{
+		width: 120px;
 	}
+	.wrapper_search{
+		width: 155px;
+	}
+
 }
 

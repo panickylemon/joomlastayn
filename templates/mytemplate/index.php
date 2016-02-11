@@ -108,7 +108,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 		<jdoc:include type="modules" name="form-1"/>
 
 		<div class="wrapper_search">
-			<jdoc:include type="modules" name="search"/>
+				<jdoc:include type="modules" name="search"/>
 		</div>
 
 		<div class="list_categories col-md-2 col-sm-3 col-xs-12">

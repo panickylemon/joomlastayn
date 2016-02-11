@@ -45,6 +45,8 @@
 html {
 	height: 100%;
 	margin-top: 0 !important;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 body {
@@ -426,7 +428,7 @@ footer {
 .main_img img{
 	width: 100%;
 	max-width: 1370px;
-	margin:  -15px auto 2px;
+	margin:  -23px auto 2px;
 }
 
 .wrap_main_categories{
@@ -511,8 +513,8 @@ footer {
 }
 
 
-/*shop-page*/
-
+	/*shop-page*/
+/*list-categiries*/
 .jshop h1{
 	display: none;
 }
@@ -569,10 +571,6 @@ footer {
 	background: #efefef;
 }
 
-.list_categories li a div::selection{
-	background: #37ff45;
-}
-
 .list_categories>ul>li:last-child{
 	border-bottom: 1px solid #efefef;
 }
@@ -583,15 +581,7 @@ footer {
 }
 
 
-.jshop_mystyle{
-	border: 1px solid #ff582c;
-	float: right;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	margin-top: -30px;
-}
-
+/*search-line*/
 .wrapper_search{
 	border: 0px solid #1bc5ff;
 	width: 200px;
@@ -617,16 +607,97 @@ footer {
 
 }
 
-.wrapper_search input{
-	outline:none;
-}
-
-.inputbox{
+.wrapper_search .inputbox{
 	border: 1px solid #d0d0d0;
 	height: 24px;
 	width: 170px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	outline:none;
 }
 
+
+.jshop_mystyle{
+	border: 0px solid #ff582c;
+	float: right;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin-top: -30px;
+}
+
+/*sorting*/
+.sorting_wrapper{
+	width: 100%;
+	margin-top: -4px;
+	margin-bottom: 10px;
+}
+
+
+.block_sorting_count_to_page{
+	border: 0px solid #bb31ef;
+	float: right;
+	margin-right: -26px;
+	font-family: "PTSansNarrow", sans-serif;
+	font-size: 15px;
+	line-height: 1;
+}
+
+.sorting_wrapper:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.block_sorting_count_to_page .inputbox{
+	outline:none;
+	border: 1px solid #d0d0d0;
+}
+
+
+.block_sorting_count_to_page .box_products_sorting{
+	border: 0px solid #73ef4c;
+	width: 198px;
+	float: left;
+}
+
+.block_sorting_count_to_page .box_products_count_to_page{
+	border: 0px solid #ef8d40;
+	width: 145px;
+	float: right;
+}
+
+.form-horizontal .box_products_sorting .control-label{
+	width: 75px;
+	margin-top: -2px;
+}
+
+.form-horizontal .box_products_count_to_page .control-label{
+	width: 72px;
+	margin-top: -2px;
+}
+
+.form-horizontal .box_products_sorting .controls .inputbox{
+	width: 100px;
+}
+
+.form-horizontal .box_products_count_to_page .controls .inputbox{
+	width: 41px;
+}
+
+.block_sorting_count_to_page select {
+	height: 25px;
+	background: url("/joomlastayn/templates/mytemplate/images/arrow2.png") no-repeat 94%;
+	background-size: 11px;
+	/*for WebKit*/
+	-webkit-appearance: none;
+	/* for FF */
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	/* for IE */
+	/*-ms-appearance: none;*/
+	/*appearance: none !important;*/
+
+}
