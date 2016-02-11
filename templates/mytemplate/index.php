@@ -37,7 +37,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 						<?php
 						$user = JFactory::getUser();
 						if (!$user->guest) {
-							echo 'Привет, '.$user->username;
+							echo 'Привет, ' . $user->username;
 
 						} else {
 							echo 'Вход | Pегистрация';
@@ -45,7 +45,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 						?>
 
 					</a>
-					</div>
+				</div>
 
 			</div>
 
@@ -107,7 +107,9 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 	<div class="wrap_content_all_page">
 		<jdoc:include type="modules" name="form-1"/>
 
-		<jdoc:include type="modules" name="search"/>
+		<div class="wrapper_search">
+			<jdoc:include type="modules" name="search"/>
+		</div>
 
 		<div class="list_categories col-md-2 col-sm-3 col-xs-12">
 			<jdoc:include type="modules" name="categories"/>

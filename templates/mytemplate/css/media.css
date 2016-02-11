@@ -19,6 +19,18 @@
 
 	.odcat {
 		display: none;
+		width: 100%;
+	}
+	.wrapper_search{
+		float: right;
+	 }
+	.jshop_mystyle{
+		margin-top: 10px;
+	}
+
+	.list_categories{
+		margin-top: -35px;
+		padding-left: 5px;
 	}
 }
 
@@ -121,4 +133,13 @@
 	}
 }
 
+
+@media screen and (max-width: 360px) {
+	.inputbox{
+		width: 125px;
+	}
+	.wrapper_search{
+		width: 154px;
+	}
+}
 
