@@ -301,7 +301,7 @@ header{
 	right: 0;
 	top: 83px;
 	background-color: rgba(201, 201, 201, 0.7);
-	margin-top: 2px;
+	margin-top: -1px;
 	z-index: 999;
 	display: none;
 }
@@ -350,10 +350,10 @@ footer {
 }
 
 .footer_wrapper{
-	width: 100%;
+	width: 90%;
 	max-width: 1200px;
 	margin: auto;
-	border: 1px solid #ccff2d;
+	border: 0px solid #ccff2d;
 	/*border-left: 1px solid #efefef;*/
 	/*border-right: 1px solid #efefef;*/
 	/*border-bottom: 1px solid #efefef;*/
@@ -370,7 +370,6 @@ footer {
 
 .menu_footer{
 	border: 0px solid red;
-	width: 60%;
 	line-height: 120px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -393,10 +392,9 @@ footer {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	width: 14%;
-	min-width: 72px;
+	min-width: 92px;
 	max-width: 130px;
 }
-
 
 .menu_footer li a{
 	display: block;
@@ -410,13 +408,13 @@ footer {
 }
 
 .icons_social_networks{
-	width: 38%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	border: 0px solid red;
 	position: relative;
 	margin-top: 43px;
+	margin-right: 12px;
 	right: 0;
 }
 
@@ -436,7 +434,6 @@ footer {
 .main_img img{
 	width: 100%;
 	max-width: 1370px;
-	/*max-height: 565px;*/
 	margin:  -15px auto 2px;
 }
 
@@ -592,6 +589,10 @@ footer {
 
 .list_categories li a div:hover{
 	background: #efefef;
+}
+
+.list_categories li a div::selection{
+	background: #37ff45;
 }
 
 .list_categories>ul>li:last-child{

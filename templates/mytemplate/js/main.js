@@ -15,12 +15,16 @@ jQuery(document).ready(function($){
 });
 
 
-
 function windowSize() {
+
+    if (jQuery(window).width() >= '770') {
+        jQuery('.odcat').show();
+    }
+
     if (jQuery(window).width() >= '654') {
         jQuery('.burger_menu').hide();
     }
-    else  {
+    else {
         jQuery('.burger_menu').show();
     }
 }
@@ -45,10 +49,3 @@ jQuery(document).ready(function($){
 
 });
 
-
-function windowSize() {
-    if (jQuery(window).width() >= '770') {
-        jQuery('.odcat').show();
-    }
-}
-jQuery(window).on('load resize', windowSize);
