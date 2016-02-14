@@ -19,19 +19,34 @@
 
 
 @media screen and (max-width: 768px) {
-	.link_all_categories_display {
-		display: block;
-	}
 
 	.odcat {
 		display: none;
 		width: 100%;
 	}
+	.buttons_mobile_shop{
+		display: block;
+	}
+
+	.title_all_categories{
+		display: none;
+	}
+
 	.wrapper_search{
-		float: right;
-	 }
+		  float: right;
+		  display: none;
+		  text-align: right;
+		  width: 50%;
+		  margin-right: -3px;
+	}
+
 	.jshop_mystyle{
-		margin-top: 10px;
+		margin-top: -17px;
+	}
+
+	.sorting_wrapper{
+		display: none;
+		padding-right: 6px;
 	}
 
 	.list_categories{
@@ -43,7 +58,7 @@
 		margin-left: 10px;
 	}
 	.form-horizontal .box_products_count_to_page .control-label{
-margin-left: 20px;
+		margin-left: 20px;
 	}
 
 	.form-horizontal .box_products_count_to_page .control-label{
@@ -137,7 +152,6 @@ margin-left: 20px;
 		height: 20px;
 	}
 
-
 	.sortind_wrapper{
 		width: 310px;
 		margin-bottom: 5px;
@@ -184,15 +198,8 @@ margin-left: 20px;
 
 
 @media screen and (max-width: 360px) {
-	.inputbox{
-		width: 125px;
-	}
-	.wrapper_search .inputbox{
-		width: 120px;
-	}
 	.wrapper_search{
-		width: 155px;
+		width: 60%;
 	}
-
 }
 

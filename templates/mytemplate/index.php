@@ -10,7 +10,7 @@ $template_url = $this->baseurl . '/templates/' . $this->template;
 $doc->addStyleSheet($template_url . '/bootstrap/css/bootstrap.min.css');
 $doc->addStyleSheet($template_url . '/css/template.css');
 $doc->addStyleSheet($template_url . '/css/media.css');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery-1.12.0.min.js', 'text/javascript');
+//$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery-1.12.0.min.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . 'bootstrap/js/bootstrap.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/main.js', 'text/javascript');
 
@@ -20,8 +20,9 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 <!DOCTYPE html>
 <html xmlns:jdoc="http://www.w3.org/2001/XInclude">
 <head>
-
+	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js"></script>
 	<jdoc:include type="head"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -107,13 +108,15 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 	<div class="wrap_content_all_page">
 		<jdoc:include type="modules" name="form-1"/>
 
-		<div class="wrapper_search">
-				<jdoc:include type="modules" name="search"/>
-		</div>
 
 		<div class="list_categories col-md-2 col-sm-3 col-xs-12">
 			<jdoc:include type="modules" name="categories"/>
+			<div class="wrapper_search">
+				<jdoc:include type="modules" name="search"/>
+			</div>
+
 		</div>
+
 
 		<jdoc:include type="modules" name="feedback"/>
 

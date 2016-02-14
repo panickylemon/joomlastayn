@@ -45,6 +45,23 @@ jQuery(document).ready(function($){
 
     $(".link_all_categories_display").click(function() {
         $(".odcat").slideToggle("fast");
+        if ($(".odcat").is(':visible')) {
+            $(".wrapper_search").hide();
+            $(".sorting_wrapper").hide();
+        }
+    });
+
+});
+
+
+jQuery(document).ready(function($){
+
+    $(".link_all_filters_display").click(function() {
+        $(".wrapper_search").slideToggle("fast");
+        $(".sorting_wrapper").slideToggle("fast");
+        if ($(".wrapper_search").is(':visible')) {
+            $(".odcat").hide();
+        }
     });
 
 });
