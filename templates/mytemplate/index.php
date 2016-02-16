@@ -8,10 +8,12 @@ $lang = JFactory::getLanguage();
 
 $template_url = $this->baseurl . '/templates/' . $this->template;
 $doc->addStyleSheet($template_url . '/bootstrap/css/bootstrap.min.css');
+$doc->addStyleSheet($template_url . '/css/jquery.reject.css');
 $doc->addStyleSheet($template_url . '/css/template.css');
 $doc->addStyleSheet($template_url . '/css/media.css');
-//$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery-1.12.0.min.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . 'bootstrap/js/bootstrap.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.reject.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/ie_message.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/main.js', 'text/javascript');
 
 $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
@@ -20,7 +22,8 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 <!DOCTYPE html>
 <html xmlns:jdoc="http://www.w3.org/2001/XInclude">
 <head>
-	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript"
+	        src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js"></script>
 	<jdoc:include type="head"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -128,43 +131,46 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 </div>
 
 <footer class="footer">
-	<div class="footer_wrapper">
-		<div class="menu_footer left">
-			<ul>
-				<li>
-					<div><a href="/joomlastayn/index.php/shop/">МАГАЗИН</a></div>
-				</li>
-				<li>
-					<div><a href="/joomlastayn/index.php/blog/">БЛОГ</a></div>
-				</li>
-				<li>
-					<div><a href="/joomlastayn/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
-				</li>
-				<li>
-					<div><a href="/joomlastayn/index.php/contacts/">КОНТАКТЫ</a></div>
-				</li>
-			</ul>
-		</div>
-		<div class="icons_social_networks right">
-			<div class="icon_footer">
-				<a href="https://www.instagram.com" class="image_hover"><img
-						src="/joomlastayn/templates/mytemplate/images/insta_hover.png"
-						alt="Instagram"></a>
-				<a href="https://www.instagram.com" class="image_upper"><img
-						src="/joomlastayn/templates/mytemplate/images/insta.png" alt="Instagram"></a>
+	<div class="footer_border_top">
+		<div class="footer_wrapper">
+			<div class="menu_footer left">
+				<ul>
+					<li>
+						<div><a href="/joomlastayn/index.php/shop/">МАГАЗИН</a></div>
+					</li>
+					<li>
+						<div><a href="/joomlastayn/index.php/blog/">БЛОГ</a></div>
+					</li>
+					<li>
+						<div><a href="/joomlastayn/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
+					</li>
+					<li>
+						<div><a href="/joomlastayn/index.php/contacts/">КОНТАКТЫ</a></div>
+					</li>
+				</ul>
 			</div>
-			<div class="icon_footer">
-				<a href="https://vk.com" class="image_hover"><img
-						src="/joomlastayn/templates/mytemplate/images/vk_hover.png" alt="VK"></a>
-				<a href="https://vk.com" class="image_upper"><img src="/joomlastayn/templates/mytemplate/images/vk.png"
-				                                                  alt="VK"></a>
-			</div>
-			<div class="icon_footer">
-				<a href="https://www.facebook.com" class="image_hover"><img
-						src="/joomlastayn/templates/mytemplate/images/facebook_hover.png"
-						alt="Facebook"></a>
-				<a href="https://www.facebook.com" class="image_upper"><img
-						src="/joomlastayn/templates/mytemplate/images/facebook.png" alt="Facebook"></a>
+			<div class="icons_social_networks right">
+				<div class="icon_footer">
+					<a href="https://www.instagram.com" class="image_hover"><img
+							src="/joomlastayn/templates/mytemplate/images/insta_hover.png"
+							alt="Instagram"></a>
+					<a href="https://www.instagram.com" class="image_upper"><img
+							src="/joomlastayn/templates/mytemplate/images/insta.png" alt="Instagram"></a>
+				</div>
+				<div class="icon_footer">
+					<a href="https://vk.com" class="image_hover"><img
+							src="/joomlastayn/templates/mytemplate/images/vk_hover.png" alt="VK"></a>
+					<a href="https://vk.com" class="image_upper"><img
+							src="/joomlastayn/templates/mytemplate/images/vk.png"
+							alt="VK"></a>
+				</div>
+				<div class="icon_footer">
+					<a href="https://www.facebook.com" class="image_hover"><img
+							src="/joomlastayn/templates/mytemplate/images/facebook_hover.png"
+							alt="Facebook"></a>
+					<a href="https://www.facebook.com" class="image_upper"><img
+							src="/joomlastayn/templates/mytemplate/images/facebook.png" alt="Facebook"></a>
+				</div>
 			</div>
 		</div>
 	</div>

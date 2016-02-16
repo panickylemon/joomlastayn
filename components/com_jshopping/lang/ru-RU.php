@@ -178,7 +178,7 @@ define('_JSHOP_NO_SELECT_PRODUCT', 'Вы не выбрали товар');
 define('_JSHOP_YES', 'Да');
 define('_JSHOP_NO', 'Нет');
 define('_JSHOP_NOT', 'Ничего');
-define('_JSHOP_DELIVERY_ADRESS', 'Адрес доставки другой?');
+define('_JSHOP_DELIVERY_ADRESS', 'Нужна доставка?');
 define('_JSHOP_AGB', 'Правила');
 define('_JSHOP_RETURN_POLICY', 'Право возврата');
 define('_JSHOP_SELECT_VALUE', 'Выбрать');
@@ -385,7 +385,7 @@ define('_JSHOP_ERROR_MIN_COUNT_ORDER_ONE_PRODUCT', 'Минимальное ко�
 define('_JSHOP_ERROR_MIN_SUM_ORDER', 'Минимальная сумма заказа - %s');
 define('_JSHOP_ERROR_MAX_SUM_ORDER', 'Максимальная сумма заказа - %s');
 
-define('_JSHOP_SELECT','Выберите');
+define('_JSHOP_SELECT','Выбрать');
 define('_JSHOP_HITS','Хиты');
 define('_JSHOP_BASIC_PRICE', 'Базовая цена');  
 

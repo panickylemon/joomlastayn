@@ -4,6 +4,25 @@
 	}
 }
 
+@media screen and (max-width: 1030px) {
+	.productfull .button_back input{
+		margin-right: 25%;
+	}
+	.productfull .button_back input{
+		margin-right: 40%;
+	}
+
+}
+
+@media screen and (max-width: 991px) {
+	.wrapper_description_product h1{
+		margin-top: 15px;
+	}
+	.productfull .button_back input{
+		margin-right: 50%;
+	}
+}
+
 @media screen and (max-width: 900px) {
 	.menu_left {
 		padding: 15px 0 0 20px;
@@ -14,6 +33,8 @@
 		padding: 15px 20px 0 0;
 		width: 38%;
 	}
+
+
 
 }
 
@@ -51,7 +72,7 @@
 
 	.list_categories{
 		margin-top: -35px;
-		padding-left: 5px;
+		padding-left: 7px;
 	}
 	.form-horizontal .box_products_sorting .control-label{
 		margin-top: 5px;
@@ -67,6 +88,40 @@
 	.block_sorting_count_to_page .box_products_count_to_page{
 		width: 160px;
 	}
+	.one_product {
+		margin: -1px 5px 0px;
+	}
+	.jshop_list_product .block_product{
+		margin-bottom: 0px;
+		border: none;
+		padding: 3px;
+	}
+
+	.one_product_one_page {
+		margin-top: 15px;
+		padding-left: 0;
+	}
+
+	.productfull .image_middle{
+		text-align: center;
+	}
+
+	.wrapper_description_product{
+		padding: 10px 7px 0;
+	}
+
+	.productfull{
+		margin-bottom: 20px;
+	}
+
+	div.jshop_prod_description p{
+		text-align: justify;
+	}
+
+	.cart_step_1{
+		padding: 15px 8px 0;
+	}
+
 }
 
 
@@ -127,6 +182,13 @@
 	.icons_social_networks img {
 		width: 30px;
 	}
+	.productfull .button_back input{
+		margin-right: 5px;
+	}
+
+	.footer_border_top {
+		padding-top: 10px;
+	}
 
 }
 
@@ -151,11 +213,21 @@
 		font-size: 12px;
 		height: 20px;
 	}
+	.footer_border_top {
+		padding-top: 8px;
+		position: relative;
+		z-index: 1;
+	}
+	.wrap_feedback_form{
+		position: relative;
+		z-index: 2;
+	}
 
 	.sortind_wrapper{
 		width: 310px;
 		margin-bottom: 5px;
 	}
+
 	.block_sorting_count_to_page{
 		float: right;
 		margin-right: 0px;
@@ -203,3 +275,53 @@
 	}
 }
 
+
+@media screen and (max-width: 300px) {
+	.link_all_filters_display {
+		width: 100px;
+		font-size: 14px;
+	}
+
+	.all_filters_display {
+		background: #000000;
+	}
+
+	.all_filters_display:hover {
+		background: #ffffff;
+	}
+
+	.link_all_categories_display {
+		width: 100px;
+		font-size: 14px;
+	}
+
+	.all_categories_display {
+		background: #000000;
+	}
+
+	.all_categories_display:hover {
+		background: #ffffff;
+	}
+
+	.wrapper_search{
+		width: 100%;
+	}
+
+	.cart_step_1{
+		font-size: 12px;
+	}
+	.pull-left{
+		display: none;
+	}
+	.icons_social_networks {
+		margin-right: 0px;
+	}
+
+    .button_back{
+	    display: none;
+    }
+
+	.cart_step_1 .data{
+	    padding-left: 8px;
+    }
+}
