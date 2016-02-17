@@ -51,11 +51,6 @@ jQuery(document).ready(function($){
         }
     });
 
-});
-
-
-jQuery(document).ready(function($){
-
     $(".link_all_filters_display").click(function() {
         $(".wrapper_search").slideToggle("fast");
         $(".sorting_wrapper").slideToggle("fast");
@@ -64,5 +59,29 @@ jQuery(document).ready(function($){
         }
     });
 
+
+    $("form[name=product]").submit(function () {
+        var select = $("[id^='jshop_attr_id']");
+        var stop_submit = false;
+        if (select.length) {
+            select.each(function() {
+                if ($(this).val() == 0) {
+                    $(this).addClass('red_border');
+                    stop_submit = true;
+                } else {
+                    $(this).removeClass('red_border');
+                }
+            });
+        }
+        if (stop_submit) {
+            $(".hidden_alert_error").show();
+            return false
+        }
+    });
+
 });
+
+
+
+
 

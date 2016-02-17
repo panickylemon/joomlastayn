@@ -11,7 +11,7 @@ $doc->addStyleSheet($template_url . '/bootstrap/css/bootstrap.min.css');
 $doc->addStyleSheet($template_url . '/css/jquery.reject.css');
 $doc->addStyleSheet($template_url . '/css/template.css');
 $doc->addStyleSheet($template_url . '/css/media.css');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . 'bootstrap/js/bootstrap.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/bootstrap/js/bootstrap.min.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.reject.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/ie_message.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/main.js', 'text/javascript');
@@ -36,22 +36,22 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 <div class="wrapper">
 	<header>
 		<div class="top_header">
-			<div class="checkin left">
-				<div><a href="/joomlastayn/index.php/lichnyj-kabinet/login">
-						<?php
-						$user = JFactory::getUser();
-						if (!$user->guest) {
-							echo 'Привет, ' . $user->username;
-
-						} else {
-							echo 'Вход | Pегистрация';
-						}
-						?>
-
-					</a>
-				</div>
-
-			</div>
+<!--			<div class="checkin left">-->
+<!--				<div><a href="/joomlastayn/index.php/lichnyj-kabinet/login">-->
+<!--						--><?php
+//						$user = JFactory::getUser();
+//						if (!$user->guest) {
+//							echo 'Привет, ' . $user->username;
+//
+//						} else {
+//							echo 'Вход | Pегистрация';
+//						}
+//						?>
+<!---->
+<!--					</a>-->
+<!--				</div>-->
+<!---->
+<!--			</div>-->
 
 			<div class="basket_header right">
 				<jdoc:include type="modules" name="cart"/>

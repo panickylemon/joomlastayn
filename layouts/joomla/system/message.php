@@ -12,16 +12,16 @@ defined('_JEXEC') or die;
 $msgList = $displayData['msgList'];
 
 ?>
-<div id="system-message-container">
+<div id="system-message-container" class="system_message_block col-md-10 col-sm-9 col-xs-12 ">
 	<?php if (is_array($msgList) && !empty($msgList)) : ?>
-		<div id="system-message">
+		<div id="system-message" class=" ">
 			<?php foreach ($msgList as $type => $msgs) : ?>
-				<div class="alert alert-<?php echo $type; ?>">
+				<div class="alert alert-info">
 					<?php // This requires JS so we should add it trough JS. Progressive enhancement and stuff. ?>
 					<a class="close" data-dismiss="alert">×</a>
 
 					<?php if (!empty($msgs)) : ?>
-						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
+<!--						<h4 class="alert-heading">--><?php //echo JText::_($type); ?><!--</h4>-->
 						<div>
 							<?php foreach ($msgs as $msg) : ?>
 								<p class="alert-message"><?php echo $msg; ?></p>
