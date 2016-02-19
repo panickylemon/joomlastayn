@@ -131,15 +131,6 @@ header {
 	margin: auto;
 }
 
-.checkin a {
-	margin-left: 5px;
-	color: black;
-	text-decoration: none;
-}
-
-.checkin a:hover {
-	text-decoration: underline;
-}
 
 .top_header {
 	height: 23px;
@@ -153,6 +144,56 @@ header {
 	clear: both;
 	display: table;
 }
+
+.wrapper_search {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-align: center;
+	width: 150px;
+	height: 24px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.button_search {
+	outline: none;
+	border-left: 0px solid #d0d0d0;
+	vertical-align: bottom;
+	margin-bottom: 11px;
+	width: 16px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.wrapper_search .inputbox {
+	border:none;
+	height: 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	outline: none;
+	font-family: "OpenSansCond";
+	font-size: 16px;
+	color: black;
+}
+
+.inputbox:focus{
+	border-bottom: 1px solid #979797;
+}
+
+.inputbox:hover{
+	border-bottom: 1px solid #979797;
+}
+
+.inputbox_wrap{
+	border-bottom: 0px solid #979797;
+	display: inline-block;
+	vertical-align: bottom;
+	height: 21px;
+}
+
 
 .basket_header {
 	border: 0px solid #ccff2d;
@@ -623,40 +664,7 @@ footer {
 	padding-left: 15px;
 }
 
-/*search-line*/
-.wrapper_search {
-	border: 0px solid #1bc5ff;
-	padding-top: 10px;
-	position: relative;
-	z-index: 9;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	text-align: center;
-}
 
-.button_search {
-	border: 1px solid #d0d0d0;
-	border-left: 0px solid #d0d0d0;
-	padding: 5px;
-	vertical-align: bottom;
-	margin-left: -4px;
-	width: 23px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-.wrapper_search .inputbox {
-	border: 1px solid #d0d0d0;
-	height: 24px;
-	width: 84%;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	outline: none;
-	font-family: "OpenSansCond";
-}
 
 /*sorting*/
 
@@ -821,8 +829,8 @@ img.jshop_img {
 }
 
 .product_main_img img{
-	width: 95%;
-	max-width: 350px;
+	width: 350px;
+	/*max-width: 350px;*/
 }
 
 .wrapper_description_product h1{
@@ -916,18 +924,16 @@ div.jshop_prod_attributes select, .jshop .prod_qty_input input{
 }
 
 #list_product_image_thumb{
-	border: 1px solid #da5346;
-	width: 350px;
-	height: 100px;
+	max-width: 340px;
+	width: 100%;
 }
 
-.product_thumb_img{
-	display: inline-block;
-	width: 65px;
-}
 
 img.jshop_img_thumb{
-	margin:0;
+	margin: 5px 0 0;
+	border: none;
+	max-width: 78px;
+	padding: 0;
 }
 
 

@@ -18,6 +18,7 @@
         <folder>images</folder>
         <folder>js</folder>
         <folder>bootstrap</folder>
+        <folder>owl-carousel</folder>
         <folder>language</folder>
         <filename>component.php</filename>
         <filename>error.php</filename>

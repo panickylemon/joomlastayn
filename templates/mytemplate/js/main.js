@@ -45,18 +45,12 @@ jQuery(document).ready(function($){
 
     $(".link_all_categories_display").click(function() {
         $(".odcat").slideToggle("fast");
-        if ($(".odcat").is(':visible')) {
-            $(".wrapper_search").hide();
-            $(".sorting_wrapper").hide();
-        }
+        $(".sorting_wrapper").hide();
     });
 
     $(".link_all_filters_display").click(function() {
-        $(".wrapper_search").slideToggle("fast");
         $(".sorting_wrapper").slideToggle("fast");
-        if ($(".wrapper_search").is(':visible')) {
-            $(".odcat").hide();
-        }
+        $(".odcat").hide();
     });
 
 
@@ -83,5 +77,21 @@ jQuery(document).ready(function($){
 
 
 
+jQuery(document).ready(function($) {
 
+    $(".owl-thumbs").owlCarousel({
+        loop:true,
+        nav: true,
+        navText: ["<img src='/joomlastayn/templates/mytemplate/owl-carousel/img/left.png'>","<img" +
+        " src='/joomlastayn/templates/mytemplate/owl-carousel/img/right.png'>"],
+        smartSpeed:300,
+        dots: false,
+        items : 4,
+    });
+
+    $("#glass").click(function() {
+        $("#jshop_search").focus();
+    })
+
+});
 

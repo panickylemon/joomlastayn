@@ -59,11 +59,10 @@
 	}
 
 	.wrapper_search{
-		  float: right;
-		  display: none;
-		  text-align: right;
-		  width: 50%;
-		  margin-right: -3px;
+
+	}
+	.main_img img {
+		margin: -18px auto 2px;
 	}
 
 	.jshop_mystyle{
@@ -100,6 +99,10 @@
 		margin-bottom: 0px;
 		border: none;
 		padding: 3px;
+	}
+
+	#list_product_image_thumb{
+		margin: auto;
 	}
 
 	.one_product_one_page {
@@ -284,14 +287,10 @@
 	.right_col_main_categories {
 		width: 100%;
 	}
-}
 
-
-@media screen and (max-width: 360px) {
-	.wrapper_search{
-		width: 60%;
-	}
-
+	.product_main_img img{
+		width: 100%;
+		max-width: 350px;}
 }
 
 
@@ -322,9 +321,6 @@
 		background: #ffffff;
 	}
 
-	.wrapper_search{
-		width: 100%;
-	}
 
 	.cart_step, .cart_block{
 		font-size: 12px;
