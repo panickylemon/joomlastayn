@@ -860,21 +860,13 @@ img.jshop_img {
 
 .wrapper_description_product{
 	padding-right: 1%;
+	padding-left: 20px;
 	font-family: "OpenSansCond";
 	font-size: 18px;
 }
 
 .productfull .image_middle{
 	width: 100%;
-}
-
-.product_main_img img{
-	width: 100%;
-	max-width: 350px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	padding-right: 20px;
 }
 
 .wrapper_description_product h1{
@@ -963,29 +955,6 @@ div.jshop_prod_attributes select, .jshop .prod_qty_input input{
 	margin-bottom: 50px;
 }
 
-#lightbox-container-image-data{
-	display: none;
-}
-
-#list_product_image_thumb{
-	max-width: 350px;
-	width: 100%;
-	padding-right: 20px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-img.jshop_img_thumb{
-	margin: 5px 0 0;
-	border: 0px solid #d0d0d0;
-	max-width: 67px;
-	padding: 0;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
 .hidden_alert_error{
 	color: #ff3304;
 	display: none;
@@ -994,6 +963,67 @@ img.jshop_img_thumb{
 	font-weight: bold;
 }
 
+#lightbox-container-image-data{
+	display: none;
+}
+
+.product_main_img img{
+	width: 100%;
+	max-width: 350px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#list_product_image_thumb{
+	max-width: 350px;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+img.jshop_img_thumb{
+	margin: 3px 0 0;
+	border: 0px solid #d0d0d0;
+	max-width: 100px;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*.list_image_thumb{*/
+	/*border: 1px solid #d0d0d0;*/
+	/*margin-top: 5px;*/
+/*}*/
+
+.image_middle{
+	border: 0px solid #ff3304;
+}
+
+.owl-next img, .owl-prev img{
+	width: 12px;
+}
+
+.owl-next{
+	float: right;
+	margin-right: -14px;
+}
+
+.owl-prev{
+	float: left;
+	margin-left: -14px;
+}
+
+.owl-theme .owl-controls{
+	margin-top: -53px;
+	padding-bottom: 37px;
+}
+
+.nav_wrap{
+	margin-top: 10px;
+}
 
 /*cart*/
 .cart_step{

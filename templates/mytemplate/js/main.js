@@ -90,6 +90,7 @@ jQuery(document).ready(function($) {
         smartSpeed:300,
         dots: false,
         items : 4,
+        margin: 2,
     });
 
     $("#glass").click(function() {
