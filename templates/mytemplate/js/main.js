@@ -42,6 +42,9 @@ jQuery(window).resize();
 
 
 jQuery(document).ready(function($){
+    if (!$(".sorting_wrapper").length) {
+        $(".link_all_filters_display").hide();
+    }
 
     $(".link_all_categories_display").click(function() {
         $(".odcat").slideToggle("fast");

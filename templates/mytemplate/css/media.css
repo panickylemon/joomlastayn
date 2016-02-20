@@ -290,7 +290,10 @@
 
 	.product_main_img img{
 		width: 100%;
-		max-width: 350px;}
+		max-width: 350px;
+		padding-right: 8px;
+		padding-left: 8px;
+	}
 }
 
 
@@ -325,7 +328,6 @@
 	.cart_step, .cart_block{
 		font-size: 12px;
 	}
-
 
 	.pull-left{
 		display: none;
