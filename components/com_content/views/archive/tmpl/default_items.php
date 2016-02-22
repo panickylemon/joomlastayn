@@ -179,7 +179,8 @@ $params = $this->params;
 						<div class="create">
 							<span class="icon-calendar"></span>
 							<time datetime="<?php echo JHtml::_('date', $item->created, 'c'); ?>" itemprop="dateCreated">
-								<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date', $item->modified, JText::_('DATE_FORMAT_LC3'))); ?>
+								<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date',
+										$item->modified, JText::_('Dr'))); ?>
 							</time>
 						</div>
 					</dd>

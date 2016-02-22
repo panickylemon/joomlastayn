@@ -121,7 +121,6 @@ a{
 .main-navigation {
 	display: none;
 }
-
 header {
 	width: 100%;
 	max-width: 1200px;
@@ -131,7 +130,6 @@ header {
 	-webkit-box-sizing: border-box;
 	margin: auto;
 }
-
 .top_header {
 	height: 23px;
 	margin-bottom: 10px;
@@ -284,7 +282,7 @@ header {
 }
 
 .menu li a:hover {
-	color: #01fab7;
+
 }
 
 .menu_left_first {
@@ -1196,6 +1194,82 @@ div.jshop_register{
 
 /*blog*/
 
+.blog, .item-page{
+	font-family: "PTSansNarrow";
+	font-size: 17px;
+}
+
+.article-info-term{
+	display: none;
+}
+
+.blog h2 a, .item-page h2{
+	color: black;
+}
+
+.blog h2 a, .item-page h2{
+	color: black;
+}
 
 
+.blog h2 a{
+	line-height: 1;
+	display: inline-block;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+.blog h2 a:after{
+	display: block;
+	content: "";
+	height: 1px;
+	width: 0;
+	margin: auto;
+	background-color: #444444;
+	-webkit-transition: width .2s ease-in-out;
+	-moz-transition: width .2s ease-in-out;
+	-o-transition: width .2s ease-in-out;
+	transition: width .2s ease-in-out;
+}
+
+.blog h2 a:hover:after, .blog h2 a:focus:after {
+	width: 100%;
+}
+
+.blog .page-header, .item-page .page-header {
+	padding: 0;
+	margin: 40px 0 5px;
+}
+
+.blog .create, .item-page .create{
+	font-size: 15px;
+	text-align: right;
+	color: #656565;
+	padding-right: 10px;
+	width: 100%;
+}
+
+.blog dl, .item-page dl{
+	margin-bottom: 5px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.video_container {
+	width: 800px;
+	max-width: 90%;
+}
 
