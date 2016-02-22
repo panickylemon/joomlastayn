@@ -1,0 +1,49 @@
+2016-02-11 23:39:28 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShoppingResizeProducts_4.0.1_UNZIP.zip
+2016-02-11 23:39:28 Copy file: /JomShopping_addon_resize_product_picture_v2.3.zip
+2016-02-11 23:39:28 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1.zip
+2016-02-11 23:39:28 Copy file: /readme.txt
+2016-02-11 23:44:01 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShoppingResizeProducts_4.0.1_UNZIP.zip
+2016-02-11 23:44:01 Copy file: /JomShopping_addon_resize_product_picture_v2.3.zip
+2016-02-11 23:44:01 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1.zip
+2016-02-11 23:44:01 Copy file: /readme.txt
+2016-02-11 23:47:27 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\plg_jshopping_addon_resize_product_picture_v1.1.zip
+2016-02-11 23:47:27 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1/resize.php
+2016-02-11 23:47:27 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1/resize.xml
+2016-02-11 23:47:43 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShoppingResizeProducts_4.0.1_UNZIP.zip
+2016-02-11 23:47:43 Copy file: /JomShopping_addon_resize_product_picture_v2.3.zip
+2016-02-11 23:47:43 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1.zip
+2016-02-11 23:47:43 Copy file: /readme.txt
+2016-02-11 23:48:30 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\plg_jshopping_addon_resize_product_picture_v1.1.zip
+2016-02-11 23:48:30 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1/resize.php
+2016-02-11 23:48:30 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1/resize.xml
+2016-02-12 21:22:18 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\plg_jshopping_addon_resize_product_picture_v1.1.zip
+2016-02-12 21:22:18 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1/resize.php
+2016-02-12 21:22:18 Copy file: /plg_jshopping_addon_resize_product_picture_v1.1/resize.xml
+2016-02-12 21:25:19 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JomShopping_addon_resize_product_picture_v2.3.zip
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/controllers/resize.php
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/images/refresh.png
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/lang/resize/de-DE.php
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/lang/resize/en-GB.php
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/lang/resize/ru-RU.php
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/views/resize/view.html.php
+2016-02-12 21:25:19 Copy file: /administrator/components/com_jshopping/views/resize/tmpl/default.php
+2016-02-12 21:25:19 Copy file: /components/com_jshopping/lang/resize/de-DE.php
+2016-02-12 21:25:19 Copy file: /components/com_jshopping/lang/resize/en-GB.php
+2016-02-12 21:25:19 Copy file: /components/com_jshopping/lang/resize/ru-RU.php
+2016-02-12 21:33:38 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\joomshopping_jqzoom_free.zip
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/index.html
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/jquery.elevatezoom.min.js
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/jqzoom.css
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/jqzoom.php
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/jqzoom.xml
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/zoomsl-3.0.min.js
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/element/donate.php
+2016-02-12 21:33:38 Copy file: /plugins/jshoppingproducts/jqzoom/element/index.html

@@ -1397,8 +1397,8 @@ function reloadAttribSelectAndPrice(id_select){
             }
 
 			if (json.block_image_thumb || json.block_image_middle){
-                jQuery("#list_product_image_thumb").html(json.block_image_thumb);            
-                jQuery("#list_product_image_middle").html(json.block_image_middle);
+                //jQuery("#list_product_image_thumb").html(json.block_image_thumb);
+                //jQuery("#list_product_image_middle").html(json.block_image_middle);
                 initJSlightBox();
             }
 			

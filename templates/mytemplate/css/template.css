@@ -91,32 +91,33 @@ body {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-
 a img {
 	border: none;
+	outline: none !important;
 }
-
+a{
+	outline: none !important;
+}
 .left {
 	float: left;
 }
-
 .right {
 	float: right;
 }
-
 .image_hover {
 	position: absolute;
 }
-
 .image_upper {
 	position: relative;
 }
-
 .image_upper:hover {
 	opacity: 0;
 }
+.red_border{
+	border: 1px solid #ff3304 !important;
+}
 
-/*header*/
+	/*header*/
 .main-navigation {
 	display: none;
 }
@@ -149,10 +150,11 @@ header {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	text-align: center;
-	width: 150px;
+	width: 190px;
 	height: 24px;
 	text-align: left;
 	padding-left: 5px;
+	border: 0px solid #ff3304;
 }
 
 .button_search {
@@ -1191,6 +1193,8 @@ div.jshop_register{
 	padding-left: 20px;
 }
 
+
+/*blog*/
 
 
 

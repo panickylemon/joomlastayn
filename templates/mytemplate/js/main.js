@@ -76,6 +76,10 @@ jQuery(document).ready(function($){
         }
     });
 
+    $("[id^='jshop_attr_id']").click(function() {
+        $("[id^='jshop_attr_id']").removeClass('red_border');
+    })
+
 });
 
 
