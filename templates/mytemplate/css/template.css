@@ -155,15 +155,15 @@ header {
 	border: 0px solid #ff3304;
 }
 .button_search {
-	outline: none;
-	border-left: 0px solid #d0d0d0;
-	vertical-align: bottom;
-	margin-bottom: 11px;
-	width: 16px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
+	 outline: none;
+	 border-left: 0px solid #d0d0d0;
+	 vertical-align: bottom;
+	 margin-bottom: 11px;
+	 width: 16px;
+	 box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	 -webkit-box-sizing: border-box;
+ }
 .wrapper_search .inputbox {
 	border:none;
 	height: 20px;
@@ -909,6 +909,7 @@ div.jshop_prod_attributes{
 	padding: 5px;
 	margin-top: -47px;
 	margin-right: 45%;
+	outline: none;
 }
 
 .productfull .button_back input:hover{

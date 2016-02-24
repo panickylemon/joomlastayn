@@ -295,6 +295,14 @@
 	.image_middle{
 		padding: 0 8px 0;
 	}
+	.wrap_input_feedback{
+		display: block;
+		width: 100%;
+	}
+	#contact{
+		padding: 20px 8px !important;
+	}
+
 }
 
 
