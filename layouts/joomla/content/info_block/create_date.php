@@ -11,8 +11,12 @@ defined('JPATH_BASE') or die;
 
 ?>
 			<dd class="create">
-					<span class="icon-calendar"></span>
+					<span class="icon-calendar">
+						<img src="/joomlastayn/templates/mytemplate/images/clock.png" alt="date">
+					</span>
+
 					<time datetime="<?php echo JHtml::_('date', $displayData['item']->created, 'c'); ?>" itemprop="dateCreated">
 						<?php echo JText::sprintf(JHtml::_('date', $displayData['item']->created, JText::_('DATE_FORMAT_LC4'))); ?>
 					</time>
 			</dd>
+

@@ -298,6 +298,13 @@
 }
 
 
+@media screen and (max-width: 440px){
+	.item-page img{
+		width: 100%;
+	}
+}
+
+
 @media screen and (max-width: 380px) {
 	.owl-theme .owl-controls{
 		display: none;

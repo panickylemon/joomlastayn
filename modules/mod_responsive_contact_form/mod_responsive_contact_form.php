@@ -277,7 +277,8 @@ if(isset($_POST['sbutton']))
 		  <div class="control-group">
 			<label class="control-label" for="inputMessage"><?php echo $params->get('fifield_name'); ?></label>
 			<div class="controls">
-			  <textarea class="input-80" name="message" rows="12" id="inputMessage" placeholder="Please include as much detail as possible." minlength="<?php echo $params->get('msg_minlength'); ?>" required></textarea>
+			  <textarea class="input-80" name="message" rows="12" id="inputMessage" placeholder="Ваше сообщение"
+			            minlength="<?php echo $params->get('msg_minlength'); ?>" required></textarea>
 			  <p class="help-block"></p>
 			</div>
 		  </div>

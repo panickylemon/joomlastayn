@@ -20,7 +20,13 @@ $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 JHtml::_('behavior.caption');
 ?>
+
+<!--<div class="back_blog"><a href="/joomlastayn/index.php/blog/">Блог</a> / 	--><?php //if ($params->get('show_title')) : ?>
+<!--		--><?php //echo $this->escape($this->item->title); ?><!----><?php //endif; ?>
+<!--</div>-->
+
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
+
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<div class="page-header">

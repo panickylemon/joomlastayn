@@ -40,7 +40,7 @@ class JConfig {
 	public $smtphost = 'smtp.yandex.ru';
 	public $smtpsecure = 'ssl';
 	public $smtpport = '465';
-	public $caching = '1';
+	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '60';
 	public $MetaDesc = 'Интернет-магазин кожаных изделий';
