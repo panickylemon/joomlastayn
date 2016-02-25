@@ -7,7 +7,7 @@
 * @license      GNU/GPL
 */
 defined('_JEXEC') or die();
-
+define('_JSHOP_PRODUCT_IS_AVAILABLE', 'Есть в наличии');
 define('_JSHOP_DETAIL', 'Подробнее');
 define('_JSHOP_QUANTITY', 'Количество');
 define('_JSHOP_ADD_TO_CART', 'В корзину');

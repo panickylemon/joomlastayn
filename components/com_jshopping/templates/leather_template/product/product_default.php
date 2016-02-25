@@ -115,7 +115,7 @@ include(dirname(__FILE__) . "/load.js.php");
 				</div>
 			</div>
 
-			<div class="wrapper_description_product nn">
+			<div class="wrapper_description_product">
 				<h1><?php print $this->product->name ?><?php if ($this->config->show_product_code) { ?> <span
 						class="jshop_code_prod">(<?php print _JSHOP_EAN ?>: <span
 							id="product_code"><?php print $this->product->getEan(); ?></span>)</span><?php } ?></h1>
@@ -322,6 +322,8 @@ include(dirname(__FILE__) . "/load.js.php");
 						)
 					</div>
 				<?php } ?>
+
+
 
 				<?php if (!$this->config->hide_text_product_not_available) { ?>
 					<div class="not_available" id="not_available"><?php print $this->available ?></div>
