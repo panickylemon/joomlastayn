@@ -1055,6 +1055,7 @@ div.jshop_register{
 	height: 28px;
 	font-size: 18px;
 	outline: none;
+	padding-left: 4px;
  }
 
 .title_order{
@@ -1088,6 +1089,21 @@ div.jshop_register{
 
 .checkoutinfo span{
 	font-family: "PTSansNarrow";
+}
+
+.cart_buttons a{
+	font-size: 16px;
+	color: #000000;
+}
+
+.cart_buttons a:hover{
+	text-decoration: none;
+	color: #444444;
+}
+
+.cart_buttons{
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 .button_cart_forward{

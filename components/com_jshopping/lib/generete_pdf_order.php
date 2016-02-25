@@ -81,7 +81,7 @@ function generatePDF($order){
 	$pdf->SetFont('freesans','',11);
 	$pdf->SetXY(20,$y);
 	$pdf->MultiCell(80,4.5,$order->firma_name."\n".$order->f_name." ".$order->l_name." ".$order->m_name."\n".$order->street." ".$order->home." ".$order->apartment."\n".$order->zip." ".$order->city."\n".$order->country, 0,'L');
-	
+
 	$pdf->SetFont('freesansi','',11);
 	$pdf->SetXY(110,$y);
 	$pdf->MultiCell(80,4.5,_JSHOP_ORDER_SHORT_NR." ".$order->order_number."\n"._JSHOP_ORDER_FROM." ".$order->order_date,0,'R');

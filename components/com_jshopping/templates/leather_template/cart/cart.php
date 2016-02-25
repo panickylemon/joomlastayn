@@ -227,7 +227,7 @@ $countprod = count($this->products);
 <div class = "jshop cart_buttons">
     <div id = "checkout">
         <div class = "pull-left td_1">
-            <a href = "<?php print $this->href_shop ?>" class = "btn">
+            <a href = "<?php print $this->href_shop ?>" class = "">
                 <img src = "/joomlastayn/templates/mytemplate/images/to_left.png" alt="<?php print _JSHOP_BACK_TO_SHOP
                 ?>" />
                 <?php print _JSHOP_BACK_TO_SHOP ?>
@@ -235,7 +235,7 @@ $countprod = count($this->products);
         </div>
         <div class = "pull-right td_2">
         <?php if ($countprod>0) : ?>
-            <a href = "<?php print $this->href_checkout ?>" class = "btn">
+            <a href = "<?php print $this->href_checkout ?>" class = "">
                 <?php print _JSHOP_CHECKOUT ?>
                 <img src = "/joomlastayn/templates/mytemplate/images/to_right.png" alt="<?php print _JSHOP_CHECKOUT
                 ?>" />
