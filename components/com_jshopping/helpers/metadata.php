@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 01.09.2015
+* @version      4.11.7 16.01.2016
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -260,10 +260,16 @@ class JshopHelpersMetadata{
 	}
 	
 	public static function product($category, $product){
-		if (getShopMainPageItemid()==JRequest::getInt('Itemid')){
+		$Itemid = JRequest::getInt('Itemid');
+		if (getShopMainPageItemid()==$Itemid){
             appendExtendPathway($category->getTreeChild(), 'product');
-        }
-        appendPathWay($product->name);
+        }		
+		$app = JFactory::getApplication();
+		$menu = $app->getMenu();
+		$menuItem = $menu->getItem($Itemid);        
+		if ($menuItem->query['view']!='product'){
+			appendPathWay($product->name);
+		}
         if ($product->meta_title=="") $product->meta_title = $product->name;
         setMetaData($product->meta_title, $product->meta_keyword, $product->meta_description);
 	}

@@ -1,12 +1,12 @@
 <?php
 /**
-* @version      4.4.0 05.11.2013
+* @version      4.12.1 05.11.2013
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
 * @license      GNU/GPL
 */
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die();
 ?>
 <div class="col100">
 <fieldset class="adminform">
@@ -94,6 +94,16 @@ defined('_JEXEC') or die('Restricted access');
      ?>
    </td>
  </tr>
+<tr>
+   <td class="key">
+     CURLOPT_SSLVERSION	 
+   </td>
+   <td>
+     <input type="text" class="inputbox" name="pm_params[CURLOPT_SSLVERSION]" value="<?php echo $params['CURLOPT_SSLVERSION']?>" />
+	 <?php echo JHTML::tooltip("4 - TLSv1_0\n5 - TLSv1_1\n6 - TLSv1_2");?>
+   </td>
+</tr>
+ 
 </table>
 </fieldset>
 </div>

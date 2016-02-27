@@ -1,12 +1,12 @@
 <?php 
 /**
-* @version      4.3.1 13.08.2013
+* @version      4.12.0 13.08.2013
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
 * @license      GNU/GPL
 */
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die();
 ?>
 <script type="text/javascript">
     <?php if ($this->product->product_quantity >0){?>
@@ -37,5 +37,7 @@ defined('_JEXEC') or die('Restricted access');
     var liveproductimgpath = '<?php print $this->config->image_product_live_path;?>';
     var liveimgpath = '<?php print $this->config->live_path."images";?>';
     var urlupdateprice = '<?php print $this->urlupdateprice;?>';
+    var joomshoppingVideoHtml5 = <?php print (int)$this->config->video_html5?>;
+    var joomshoppingVideoHtml5Type = '<?php print $this->config->video_html5_type?>';
     <?php print $this->_tmp_product_ext_js;?>
 </script>

@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 18.08.2013
+* @version      4.11.4 28.11.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -36,7 +36,8 @@ class jshopUserGust extends jshopUserShopBase{
     function store($updateNulls = false){
         $this->user_id = -1;
         $session = JFactory::getSession();
-        $session->set('user_shop_guest', serialize($this));
+        $properties = $this->getProperties();
+        $session->set('user_shop_guest', serialize($properties));
         JDispatcher::getInstance()->trigger('onAfterStoreJshopUserGust', array(&$this));
     return true;
     }

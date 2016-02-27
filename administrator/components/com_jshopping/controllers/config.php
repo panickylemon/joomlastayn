@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.3 31.01.2015
+* @version      4.11.4 31.01.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -671,12 +671,12 @@ class JshoppingControllerConfig extends JControllerLegacy{
     }
     
     function preview_pdf(){
-        
         $dispatcher = JDispatcher::getInstance();
 		$jshopConfig = JSFactory::getConfig();
         $jshopConfig->currency_code = "USD";
         $file_generete_pdf_order = $jshopConfig->file_generete_pdf_order;		
         $order = JSFactory::getTable('order', 'jshop');
+        $order->prepareOrderPrint = 1;
         $order->firma_name = "Firma";
         $order->f_name = "Fname";
         $order->l_name = 'Lname';
@@ -684,7 +684,7 @@ class JshoppingControllerConfig extends JControllerLegacy{
         $order->zip = "Zip"; 
         $order->city = "City";
         $order->country = "Country";
-        $order->order_number = outputDigit(0,8);
+        $order->order_number = outputDigit(1, 8);
         $order->order_date = strftime($jshopConfig->store_date_format, time());
         $order->products = array();
         $prod = new stdClass();

@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 13.08.2013
+* @version      4.11.5 09.12.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -35,6 +35,13 @@ class PaymentRoot{
     function getDisplayNameParams(){
         return array();
     }
+	
+	/**
+	* get payment params for display in order
+	*/
+	function getPaymentParamsData($params){
+		return $params;
+	}
     
     /**
     * get current params

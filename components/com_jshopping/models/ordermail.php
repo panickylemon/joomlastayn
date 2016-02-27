@@ -169,7 +169,7 @@ class jshopOrderMail extends jshopBase{
 		
 		$this->order = JSFactory::getTable('order', 'jshop');
         $this->order->load($this->getOrderId());
-        $this->order->prepareOrderPrint();        
+        $this->order->prepareOrderPrint('', 1);
         $this->show_percent_tax = $this->order->getShowPercentTax();
 		$this->hide_subtotal = $this->order->getHideSubtotal();
 		$this->order->fixConfigShowWeightOrder();

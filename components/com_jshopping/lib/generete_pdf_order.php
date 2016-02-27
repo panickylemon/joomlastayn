@@ -1,12 +1,12 @@
 <?php
 /**
-* @version      4.8.1 09.01.2015
+* @version      4.12.1 09.01.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
 * @license      GNU/GPL
 */
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die();
 
 include(JPATH_SITE."/components/com_jshopping/lib/pdf_config.php");
 include(JPATH_SITE."/components/com_jshopping/lib/tcpdf/tcpdf.php");
@@ -80,8 +80,18 @@ function generatePDF($order){
 	$y+=10;
 	$pdf->SetFont('freesans','',11);
 	$pdf->SetXY(20,$y);
-	$pdf->MultiCell(80,4.5,$order->firma_name."\n".$order->f_name." ".$order->l_name." ".$order->m_name."\n".$order->street." ".$order->home." ".$order->apartment."\n".$order->zip." ".$order->city."\n".$order->country, 0,'L');
-
+		
+	$address_data = array(
+		$order->firma_name,
+		trim($order->f_name." ".$order->l_name." ".$order->m_name),
+		trim(trim($order->street." ".$order->street_nr)." ".$order->home." ".$order->apartment),
+		trim($order->zip." ".$order->city),
+		$order->country
+	);
+	$pdf_address = implode("\n", array_filter($address_data));
+	$dispatcher->trigger('onGeneratePdfOrderBeforePdfAddress', array(&$order, &$pdf, &$pdf_address));
+	$pdf->MultiCell(80,4.5, $pdf_address, 0,'L');
+	
 	$pdf->SetFont('freesansi','',11);
 	$pdf->SetXY(110,$y);
 	$pdf->MultiCell(80,4.5,_JSHOP_ORDER_SHORT_NR." ".$order->order_number."\n"._JSHOP_ORDER_FROM." ".$order->order_date,0,'R');

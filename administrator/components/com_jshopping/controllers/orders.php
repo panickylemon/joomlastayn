@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.2 22.10.2014
+* @version      4.11.4 28.11.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -478,7 +478,7 @@ class JshoppingControllerOrders extends JControllerLegacy{
             }
         }elseif($order->order_created==1 && $jshopConfig->generate_pdf){
 			$order->load($order_id);
-            $order->prepareOrderPrint();
+            $order->prepareOrderPrint('', 1);
             $order->generatePdf($file_generete_pdf_order);
 		}
         

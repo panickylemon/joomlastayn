@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.3 10.07.2015
+* @version      4.12.0 06.02.2016
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -228,6 +228,12 @@ $config->manufacturer_sorting_direction = 'asc';
 $config->get_vendors_order_query = 'shop_name';
 $config->order_notfinished_default = 0;
 $config->display_tax_0 = 0;
+$config->rating_star_width = 16;
+$config->video_html5 = 0;
+$config->video_html5_type = '';
+$config->file_extension_video = array(
+    'mp4'
+);
 
 $config->default_template_block_list_product = 'list_products/list_products.php';
 $config->default_template_no_list_product = 'list_products/no_products.php';
@@ -397,7 +403,9 @@ $catprod_other_config = array(
 
 $image_other_config = array(
     "image_quality",
-    "image_fill_color"
+    "image_fill_color",
+    "video_html5",
+    "video_html5_type"
 );
 
 $fields_client_sys = array();

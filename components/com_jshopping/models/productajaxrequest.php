@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.1 22.10.2015
+* @version      4.11.5 09.12.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -106,7 +106,7 @@ class jshopProductAjaxRequest extends jshopBase{
 
         if (is_array($product->product_add_prices)){
             foreach($product->product_add_prices as $k=>$v){
-                $rows['pq_'.$v->product_quantity_start] = formatprice($v->price);
+                $rows['pq_'.$v->product_quantity_start] = formatprice($v->price).$v->ext_price;
             }
         }
         if ($product->product_old_price){

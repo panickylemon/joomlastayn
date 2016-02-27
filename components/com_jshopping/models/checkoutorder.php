@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 18.12.2014
+* @version      4.11.5 18.12.2014
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -105,7 +105,8 @@ class jshopCheckoutOrder extends jshopCheckout{
         if (is_array($pm_params) && !$paymentSystemVerySimple){
             $payment_system->setParams($pm_params);
             $payment_params_names = $payment_system->getDisplayNameParams();
-            $order->payment_params = getTextNameArrayValue($payment_params_names, $pm_params);
+			$pm_params_data = $payment_system->getPaymentParamsData($pm_params);
+            $order->payment_params = getTextNameArrayValue($payment_params_names, $pm_params_data);
             $order->setPaymentParamsData($pm_params);
         }
         

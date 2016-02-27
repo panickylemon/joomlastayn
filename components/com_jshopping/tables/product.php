@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 10.07.2015
+* @version      4.11.7 10.07.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -750,7 +750,7 @@ class jshopProduct extends JTableAvto implements jshopProductListInterface{
                         $tmp[] = $fieldvalues[$extrafiledvalueid];
                     }
                     $extra_field_value = implode($jshopConfig->multi_charactiristic_separator, $tmp);
-                    $rows[] = array("id"=>$field_id, "name"=>$listfield[$field_id]->name, "description"=>$listfield[$field_id]->description, "value"=>$extra_field_value, "groupname"=>$listfield[$field_id]->groupname);
+                    $rows[] = array("id"=>$field_id, "name"=>$listfield[$field_id]->name, "description"=>$listfield[$field_id]->description, "value"=>$extra_field_value, "groupname"=>$listfield[$field_id]->groupname, 'field_value_ids'=>$listid);
                 }
             }else{
                 if ($this->$field_name!=""){
@@ -1109,7 +1109,7 @@ class jshopProduct extends JTableAvto implements jshopProductListInterface{
                     if ($jshopConfig->attr_display_addprice){
                         foreach($options as $k2=>$v2){
                             if (($v2->price_mod=="+" || $v2->price_mod=="-" || $jshopConfig->attr_display_addprice_all_sign) && $v2->addprice>0){
-                                $ext_price_info = " (".$v2->price_mod.formatprice($v2->addprice).")";
+                                $ext_price_info = " (".$v2->price_mod.formatprice($v2->addprice, null, 0, -1).")";
                                 $options[$k2]->value_name .=$ext_price_info;
                             }
                         }

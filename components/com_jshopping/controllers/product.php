@@ -250,6 +250,7 @@ class JshoppingControllerProduct extends JshoppingControllerBase{
         $view->assign('filename', $file->demo);
         $view->assign('description', $file->demo_descr);
         $view->assign('scripts_load', $scripts_load);
+        $view->assign('file_is_video', $file->fileDemoIsVideo());
         $dispatcher = JDispatcher::getInstance();
         $dispatcher->trigger('onBeforeDisplayProductShowMediaView', array(&$view) );
         $view->display(); 

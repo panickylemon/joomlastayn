@@ -58,3 +58,60 @@ Start install: C:\xampp\htdocs\joomlastayn\tmp\addon_rus_invoices_for_payment_1.
 2016-02-24 19:52:22 Copy file: /components/com_jshopping/lang/addon_rus_invoices_for_payment/ru-RU.php
 2016-02-24 19:52:22 Copy file: /plugins/jshoppingorder/addon_rus_invoices_for_payment/addon_rus_invoices_for_payment.php
 2016-02-24 19:52:22 Copy file: /plugins/jshoppingorder/addon_rus_invoices_for_payment/addon_rus_invoices_for_payment.xml
+2016-02-26 11:54:06 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShopping-update-4.11.3-4.11.4.zip
+2016-02-26 11:54:06 Copy file: /administrator/components/com_jshopping/jshopping.xml
+2016-02-26 11:54:06 Copy file: /administrator/components/com_jshopping/controllers/config.php
+2016-02-26 11:54:07 Copy file: /administrator/components/com_jshopping/controllers/orders.php
+2016-02-26 11:54:07 Copy file: /components/com_jshopping/models/ordermail.php
+2016-02-26 11:54:07 Copy file: /components/com_jshopping/models/userguest.php
+2016-02-26 11:54:07 Copy file: /components/com_jshopping/tables/order.php
+2016-02-26 11:55:00 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShopping-update-4.11.4-4.11.5.zip
+2016-02-26 11:55:00 Copy file: /administrator/components/com_jshopping/jshopping.xml
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/lib/default_config.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/lib/functions.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/lib/generete_pdf_order.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/models/checkoutorder.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/models/productajaxrequest.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/models/searchrequest.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/payments/payment.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/tables/product.php
+2016-02-26 11:55:01 Copy file: /components/com_jshopping/tables/usergroup.php
+2016-02-26 11:55:02 Copy file: /components/com_jshopping/templates/default/product/product_default.php
+2016-02-26 11:55:16 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShopping-update-4.11.5-4.11.6.zip
+2016-02-26 11:55:16 Copy file: /administrator/components/com_jshopping/jshopping.xml
+2016-02-26 11:55:16 Copy file: /components/com_jshopping/lib/jsuri.php
+2016-02-26 11:55:17 Copy file: /components/com_jshopping/lib/shop_core_file.php
+2016-02-26 11:55:17 Copy file: /components/com_jshopping/models/userlogin.php
+2016-02-26 11:55:17 Copy file: /components/com_jshopping/tables/order.php
+2016-02-26 11:55:45 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShopping-update-4.11.6-4.12.0.zip
+2016-02-26 11:55:45 Copy file: /administrator/components/com_jshopping/jshopping.xml
+2016-02-26 11:55:45 Copy file: /administrator/components/com_jshopping/controllers/coupons.php
+2016-02-26 11:55:46 Copy file: /administrator/components/com_jshopping/lang/de-DE.php
+2016-02-26 11:55:46 Copy file: /administrator/components/com_jshopping/lang/en-GB.php
+2016-02-26 11:55:46 Copy file: /administrator/components/com_jshopping/lang/ru-RU.php
+2016-02-26 11:55:46 Copy file: /administrator/components/com_jshopping/views/config/tmpl/image.php
+2016-02-26 11:55:47 Copy file: /administrator/components/com_jshopping/views/orders/tmpl/edit.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/controllers/product.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/helpers/metadata.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/js/functions.js
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/js/validateForm.js
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/lib/default_config.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/lib/functions.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/models/userregister.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/tables/country.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/tables/product.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/tables/productfiles.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/templates/default/product/load.js.php
+2016-02-26 11:55:47 Copy file: /components/com_jshopping/templates/default/product/playmedia.php
+2016-02-26 11:56:46 
+Start install: C:\xampp\htdocs\joomlastayn\tmp\JoomShopping-update-4.12.0-4.12.1.zip
+2016-02-26 11:56:47 Copy file: /administrator/components/com_jshopping/jshopping.xml
+2016-02-26 11:56:47 Copy file: /administrator/components/com_jshopping/controllers/products.php
+2016-02-26 11:56:47 Copy file: /administrator/components/com_jshopping/models/products.php
+2016-02-26 11:56:47 Copy file: /components/com_jshopping/lib/generete_pdf_order.php
+2016-02-26 11:56:47 Copy file: /components/com_jshopping/payments/pm_paypal/adminparamsform.php
+2016-02-26 11:56:47 Copy file: /components/com_jshopping/payments/pm_paypal/pm_paypal.php

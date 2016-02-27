@@ -1,12 +1,12 @@
 <?php
 /**
-* @version      4.7.0 05.11.2013
+* @version      4.12.1 05.11.2013
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
 * @license      GNU/GPL
 */
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die();
 
 class pm_paypal extends PaymentRoot{
     
@@ -34,6 +34,9 @@ class pm_paypal extends PaymentRoot{
         } else{
             $host = "www.paypal.com";
         }
+		if ($pmconfigs['CURLOPT_SSLVERSION']==''){
+			$pmconfigs['CURLOPT_SSLVERSION'] = 4;
+		}
 		
         $post = JRequest::get('post');
 		$order->order_total = $this->fixOrderTotal($order);
@@ -74,7 +77,9 @@ class pm_paypal extends PaymentRoot{
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
-        curl_setopt($ch, CURLOPT_SSLVERSION, 4);
+		if ($pmconfigs['CURLOPT_SSLVERSION']){
+			curl_setopt($ch, CURLOPT_SSLVERSION, $pmconfigs['CURLOPT_SSLVERSION']);
+		}
         curl_setopt($ch, CURLOPT_USERAGENT, 'PayPal-PHP-SDK');
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
         if( !($res = curl_exec($ch)) ) {                

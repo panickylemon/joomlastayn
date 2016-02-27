@@ -1,5 +1,5 @@
-jQuery(function(){
-    jQuery.reject({
+jQuery(function($){
+    $.reject({
         reject: {
             msie5: true,
             msie6: true,

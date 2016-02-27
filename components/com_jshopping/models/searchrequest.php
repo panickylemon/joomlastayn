@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 18.12.2014
+* @version      4.11.5 18.12.2014
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -95,8 +95,8 @@ class jshopSearchrequest{
 	public function getExtraFields(){
 		$jshopConfig = JSFactory::getConfig();
 		if ($jshopConfig->admin_show_product_extra_field){
-            if (isset($post['extra_fields'])) 
-                $extra_fields = $post['extra_fields'];
+            if (isset($this->request['extra_fields'])) 
+                $extra_fields = $this->request['extra_fields'];
             else
                 $extra_fields = array();
             $extra_fields = filterAllowValue($extra_fields, "array_int_k_v+");

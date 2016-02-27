@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 13.08.2013
+* @version      4.11.7 13.08.2013
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -10,10 +10,10 @@ defined('_JEXEC') or die();
 
 class jshopCountry extends jshopMultilang{
     
-    var $ordering = null;
+    public $ordering = null;
 
     function __construct(&$_db){
-        parent::__construct( '#__jshopping_countries', 'country_id', $_db );
+        parent::__construct('#__jshopping_countries', 'country_id', $_db);
     }
 
     function getAllCountries($publish = 1){
@@ -27,5 +27,19 @@ class jshopCountry extends jshopMultilang{
         $db->setQuery($query);
         return $db->loadObjectList();
     }
+	
+	public function getCountryIdFromCode2($code2){
+		$db = JFactory::getDbo();			
+		$query = "select country_id from `#__jshopping_countries` where country_code_2='".$db->escape($code2)."'";
+		$db->setQuery($query);
+        return $db->loadResult();
+	}
+	
+	public function getCountryIdFromCode($code){
+		$db = JFactory::getDbo();			
+		$query = "select country_id from `#__jshopping_countries` where country_code='".$db->escape($code)."'";
+		$db->setQuery($query);
+        return $db->loadResult();
+	}
 
 }

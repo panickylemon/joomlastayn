@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 18.12.2014
+* @version      4.11.6 06.01.2016
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -488,7 +488,7 @@ class jshopOrder extends JTable{
         return unserialize($this->shipping_params_data);
     }
     
-    function prepareOrderPrint($page = ''){
+    function prepareOrderPrint($page = '', $date_format = 0){
         $jshopConfig = JSFactory::getConfig();
         $lang = JSFactory::getLang();
         $jshopConfig->user_field_title[0] = '';
@@ -499,7 +499,15 @@ class jshopOrder extends JTable{
         }else{
             $this->status = $this->getStatus();
         }
-        $this->order_date = strftime($jshopConfig->store_date_format, strtotime($this->order_date));
+		
+        if (!isset($this->order_date_print)){
+			$this->order_date_print = formatdate($this->order_date);
+			$this->order_datetime_print = formatdate($this->order_date, 1);
+			if ($date_format){
+				$this->order_date = $this->order_date_print;
+			}
+		}
+		
         $this->products = $this->getAllItems();
         $this->weight = $this->getWeightItems();
 		
@@ -773,7 +781,7 @@ class jshopOrder extends JTable{
         $text = str_replace("{email}", $this->email, $text);
         $text = str_replace("{title}", $this->title, $text);
         
-        if ($alias = 'order_email_descr_end' && $jshopConfig->show_return_policy_text_in_email_order){
+        if ($alias == 'order_email_descr_end' && $jshopConfig->show_return_policy_text_in_email_order){
             $list = $this->getReturnPolicy();
             $listtext = array();
             foreach($list as $v){

@@ -1,6 +1,6 @@
 <?php 
 /**
-* @version      4.10.0 05.11.2013
+* @version      4.12.0 05.11.2013
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -109,26 +109,7 @@ JHtml::_('bootstrap.tooltip');
     </td>
     <td>
     </td>
-  </tr>
-  <tr><td></td></tr>
-  <tr>
-    <td class="key">
-      <?php echo _JSHOP_VIDEO_PRODUCT_WIDTH;?>
-    </td>
-    <td>
-      <input type="text" name="video_product_width" value ="<?php echo $jshopConfig->video_product_width?>" />      
-    </td>
-  </tr>
-  <tr>
-    <td class="key">
-      <?php echo _JSHOP_VIDEO_PRODUCT_HEIGHT; ?>
-    </td>
-    <td>
-      <input type="text" name="video_product_height" value ="<?php echo $jshopConfig->video_product_height?>" />
-    </td>
-    <td>
-    </td>
-  </tr>
+  </tr>  
   <tr>
     <td class="key">
       <?php echo _JSHOP_IMAGE_RESIZE_TYPE; ?>
@@ -157,8 +138,52 @@ JHtml::_('bootstrap.tooltip');
         <input type="text" name="image_fill_color" value ="<?php echo $jshopConfig->image_fill_color?>" />
     </td>
 </tr>
-
 <?php $pkey="etemplatevar";if ($this->$pkey){print $this->$pkey;}?>
+</table>
+</<fieldset>
+</div>
+<div class="clr"></div>
+
+<div class="col100">
+<fieldset class="adminform">
+    <legend><?php echo _JSHOP_PRODUCT_VIDEOS ?></legend>
+<table class="admintable table-striped">
+<tr>
+    <td class="key" style="width:200px;">
+      <?php echo _JSHOP_VIDEO_PRODUCT_WIDTH;?>
+    </td>
+    <td>
+      <input type="text" name="video_product_width" value ="<?php echo $jshopConfig->video_product_width?>" />      
+    </td>
+</tr>
+<tr>
+    <td class="key">
+      <?php echo _JSHOP_VIDEO_PRODUCT_HEIGHT; ?>
+    </td>
+    <td>
+      <input type="text" name="video_product_height" value ="<?php echo $jshopConfig->video_product_height?>" />
+    </td>    
+</tr>
+<tr>
+    <td class="key">
+      <?php echo _JSHOP_VIDEO_HTML5?>
+    </td>
+    <td>      
+      <input type="hidden" name="video_html5" value="0">
+      <input type="checkbox" name="video_html5" value="1" <?php if ($jshopConfig->video_html5) echo 'checked="checked"';?> />
+    </td>    
+</tr>
+<tr>
+    <td class="key">
+      <?php echo _JSHOP_VIDEO_HTML5_TYPE?>
+    </td>
+    <td>
+      <input type="text" name="video_html5_type" value ="<?php echo $jshopConfig->video_html5_type?>" />
+      <?php echo JHTML::tooltip("video/mp4, video/webm, video/ogg");?>
+    </td>    
+</tr>
+
+<?php $pkey="etemplatevar2";if ($this->$pkey){print $this->$pkey;}?>
 </table>
 </fieldset>
 </div>

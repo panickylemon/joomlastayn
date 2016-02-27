@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.3 20.11.2015
+* @version      4.12.0 20.11.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -1048,3 +1048,5 @@ define('_JSHOP_EXT_MENU_CHECKOUT_STEP','Extended checkout steps');
 define('_JSHOP_GUEST','Gast');
 define('_JSHOP_TAX_CALCULATE', 'berechnen Sie Steuern');
 define('_JSHOP_HIDE_PRICE_NULL', 'Preis ausblenden = 0');
+define('_JSHOP_VIDEO_HTML5', 'Video HTML5');
+define('_JSHOP_VIDEO_HTML5_TYPE', 'Video HTML5 type');

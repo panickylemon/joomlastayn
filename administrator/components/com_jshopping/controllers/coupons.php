@@ -1,13 +1,13 @@
 <?php
 /**
-* @version      4.10.0 22.12.2012
+* @version      4.11.7 22.12.2012
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
 * @license      GNU/GPL
 */
 
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined( '_JEXEC' ) or die();
 jimport('joomla.application.component.controller');
 
 class JshoppingControllerCoupons extends JControllerLegacy{
@@ -108,7 +108,7 @@ class JshoppingControllerCoupons extends JControllerLegacy{
         $dispatcher = JDispatcher::getInstance();        
         
         $post = JRequest::get("post");        
-        $post['coupon_code'] = JRequest::getCmd("coupon_code");
+        $post['coupon_code'] = JRequest::getVar("coupon_code");
         $post['coupon_publish'] = JRequest::getInt("coupon_publish");
         $post['finished_after_used'] = JRequest::getInt("finished_after_used");
         $post['coupon_value'] = saveAsPrice($post['coupon_value']);
@@ -203,4 +203,3 @@ class JshoppingControllerCoupons extends JControllerLegacy{
     }
         
 }
-?>

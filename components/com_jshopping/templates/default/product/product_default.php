@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.10.2 05.11.2013
+* @version      4.10.5 09.12.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -194,6 +194,7 @@ include(dirname(__FILE__)."/load.js.php");
                             </span> 
                             <span class="per_piece">/ <?php print $this->product->product_add_price_unit?></span>
                         </td>
+						<?php print $add_price->_tmp_var?>
                     </tr>
                 <?php }?>
             </table>

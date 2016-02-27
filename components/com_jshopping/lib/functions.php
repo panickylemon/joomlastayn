@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.2 09.01.2015
+* @version      4.11.7 09.01.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -597,9 +597,10 @@ return $alias;
 function showMarkStar($rating){
     $jshopConfig = JSFactory::getConfig();
     $count = floor($jshopConfig->max_mark / $jshopConfig->rating_starparts);
-    $width = $count * 16;
+	$star_width = $jshopConfig->rating_star_width;
+    $width = $count * $star_width;
     $rating = round($rating);
-    $width_active = intval($rating * 16 / $jshopConfig->rating_starparts);
+    $width_active = intval($rating * $star_width / $jshopConfig->rating_starparts);
     $html = "<div class='stars_no_active' style='width:".$width."px'>";
     $html .= "<div class='stars_active' style='width:".$width_active."px'>";
     $html .= "</div>";
@@ -659,9 +660,12 @@ function listProductUpdateData($products, $setUrl = 0){
     $dispatcher = JDispatcher::getInstance();    
 	
     foreach($products as $key=>$value){
-		$dispatcher->trigger('onListProductUpdateDataProduct', array(&$products, &$key, &$value));
 		$use_userdiscount = 1;
-		if ($jshopConfig->user_discount_not_apply_prod_old_price && $products[$key]->product_old_price>0) $use_userdiscount = 0;
+		if ($jshopConfig->user_discount_not_apply_prod_old_price && $products[$key]->product_old_price>0){
+			$use_userdiscount = 0;
+		}
+		$dispatcher->trigger('onListProductUpdateDataProduct', array(&$products, &$key, &$value, &$use_userdiscount));
+		
         $products[$key]->_original_product_price = $products[$key]->product_price;
 		$products[$key]->product_price_wp = $products[$key]->product_price;
         $products[$key]->product_price_default = 0;

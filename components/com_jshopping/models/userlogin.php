@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 11.09.2015
+* @version      4.11.6 11.09.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -92,7 +92,7 @@ class jshopUserlogin{
     public function getRequestReturnUrl(){
         if ($return = JRequest::getVar('return', '', 'method', 'base64')){
             $return = base64_decode($return);
-            if (!JURI::isInternal($return)) {
+            if (!JSUri::isInternal($return)) {
                 $return = '';
             }
         }

@@ -1251,26 +1251,48 @@ function clearProductListFilter(){
     submitListProductFilters();
 }
 
+var joomshoppingVideoHtml5 = 0;
+var joomshoppingVideoHtml5Type = '';
 function showVideo(idElement, width, height){
-	jQuery('.video_full').hide();
-    jQuery('#hide_' + idElement).attr("href", jQuery("#"+idElement).attr("href"));
-	jQuery('a.lightbox').hide();
-    jQuery('#main_image').hide();
-	jQuery('#hide_' + idElement).show();
-	jQuery('#hide_' + idElement).media( { width: width, height: height} );
-    jQuery(".product_label").hide();
-}
-
-function showVideoCode(idElement){
-	jQuery('.video_full:not(#hide_' + idElement + ')').hide();
+    var videofile = jQuery("#"+idElement).attr("href");
+    
+    jQuery('.video_full').hide();
+    jQuery('#hide_' + idElement).attr("href", videofile);
     jQuery('a.lightbox').hide();
     jQuery('#main_image').hide();
     jQuery(".product_label").hide();
-	jQuery('#hide_' + idElement).show();
+    jQuery("#videoshophtml5").remove();
+    if (!joomshoppingVideoHtml5){
+        jQuery('#hide_' + idElement).show();
+        jQuery('#hide_' + idElement).media( { width: width, height: height} );
+    }else{
+        var videoOptions = {
+            id: 'videoshophtml5',
+            src: videofile,            
+            width: width,
+            height: height,
+            controls: true
+        };
+        if (joomshoppingVideoHtml5Type!=''){
+            videoOptions.type = joomshoppingVideoHtml5Type;
+        }
+        var video = jQuery('<video />', videoOptions);
+        video.appendTo(jQuery('.image_middle'));
+    }
+}
+
+function showVideoCode(idElement){
+    jQuery('.video_full:not(#hide_' + idElement + ')').hide();
+    jQuery('a.lightbox').hide();
+    jQuery('#main_image').hide();
+    jQuery(".product_label").hide();
+    jQuery("#videoshophtml5").remove();
+    jQuery('#hide_' + idElement).show();
 }
 
 function showImage(id){    
     jQuery('.video_full').hide();
+    jQuery("#videoshophtml5").remove();
     jQuery('a.lightbox').hide();
     jQuery("#main_image_full_"+id).show();
     jQuery(".product_label").show();

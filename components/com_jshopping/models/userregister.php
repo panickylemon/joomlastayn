@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.1 11.09.2015
+* @version      4.11.7 11.09.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -162,6 +162,7 @@ class jshopUserregister extends jshopUserBase{
 		if (!$this->userSave()){
 			return 0;
 		}
+		extract(js_add_trigger(get_defined_vars(), "after"));
 		return 1;
 	}
     
@@ -224,6 +225,14 @@ class jshopUserregister extends jshopUserBase{
             $message = JText::_('COM_USERS_REGISTRATION_SAVE_SUCCESS');
         }
 		return $message;
+	}
+	
+	public function getRequestData(){
+		return $this->post_data;
+	}
+	
+	public function getData(){
+		return $this->data;
 	}
 
 }

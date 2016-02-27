@@ -1,14 +1,13 @@
 <?php
 /**
-* @version      4.11.0 16.06.2015
+* @version      4.12.1 16.06.2015
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
 * @license      GNU/GPL
 */
 
-defined( '_JEXEC' ) or die( 'Restricted access' );
-jimport('joomla.application.component.controller');
+defined('_JEXEC') or die();
 
 class JshoppingControllerProducts extends JControllerLegacy{
     
@@ -818,111 +817,14 @@ class JshoppingControllerProducts extends JControllerLegacy{
     }
     
     function savegroup(){
-        $jshopConfig = JSFactory::getConfig();
-        
         $dispatcher = JDispatcher::getInstance();
-        $dispatcher->trigger('onBeforSaveListProduct', array() );
-        
+        $dispatcher->trigger('onBeforSaveListProduct', array());        
         $cid = JRequest::getVar('cid');
         $post = JRequest::get('post');
-        $_products = JSFactory::getModel("products");
+        $model = JSFactory::getModel("products");
         foreach($cid as $id){
-            $product = JSFactory::getTable('product', 'jshop');
-            $product->load($id);
-            if ($post['access']!=-1){
-                $product->set('access', $post['access']);
-            }
-            if ($post['product_publish']!=-1){
-                $product->set('product_publish', $post['product_publish']);
-            }
-            if ($post['product_weight']!=""){
-                $product->set('product_weight', $post['product_weight']);
-            }
-            if ($post['product_quantity']!=""){
-                $product->set('product_quantity', $post['product_quantity']);
-                $product->set('unlimited', 0);
-            }            
-            if (isset($post['unlimited']) && $post['unlimited']){
-                $product->set('product_quantity', 1);
-                $product->set('unlimited', 1);
-            }
-            if (isset($post['product_template']) && $post['product_template'] != -1){
-                $product->set('product_template', $post['product_template']);
-            }
-            if (isset($post['product_tax_id']) && $post['product_tax_id']!=-1){
-                $product->set('product_tax_id', $post['product_tax_id']);
-            }
-            if (isset($post['product_manufacturer_id']) && $post['product_manufacturer_id']!=-1){
-                $product->set('product_manufacturer_id', $post['product_manufacturer_id']);
-            }
-            if (isset($post['vendor_id']) && $post['vendor_id']!=-1){
-                $product->set('vendor_id', $post['vendor_id']);
-            }
-            if (isset($post['delivery_times_id']) && $post['delivery_times_id']!=-1){
-                $product->set('delivery_times_id', $post['delivery_times_id']);
-            }
-            if (isset($post['label_id']) && $post['label_id']!=-1){
-                $product->set('label_id', $post['label_id']);
-            }
-            if (isset($post['weight_volume_units']) && $post['weight_volume_units']!=""){
-                $product->set('weight_volume_units', $post['weight_volume_units']);
-                $product->set('basic_price_unit_id', $post['basic_price_unit_id']);
-            }
-            if ($post['product_price']!=""){
-                $oldprice = $product->product_price;
-                $price = $_products->getModPrice($product->product_price, saveAsPrice($post['product_price']), $post['mod_price']);
-                $product->set('product_price', $price);
-                if ($post['use_old_val_price']==1){
-                    $product->set('product_old_price', $oldprice);
-                }
-            }
-            if (isset($post['product_old_price']) && $post['product_old_price']!=""){
-                $price = $_products->getModPrice($product->product_old_price, saveAsPrice($post['product_old_price']), $post['mod_old_price']);
-                $product->set('product_old_price', $price);
-            }
-            if (isset($post['product_price']) && $post['product_price']!="" || $post['product_old_price']!=""){                
-                $product->set('currency_id', $post['currency_id']);
-            }
-            if (isset($post['category_id']) && $post['category_id']){
-                $_products->setCategoryToProduct($id, $post['category_id']);
-            }
-			if ($jshopConfig->admin_show_product_extra_field){				
-				$_productfields = JSFactory::getModel("productFields");
-				$list_productfields = $_productfields->getList(1);
-				foreach($list_productfields as $v){
-					$_nef = 'extra_field_'.$v->id;
-					switch($v->type){
-						case 0:							
-							if (isset($post['productfields'][$_nef]) and is_array($post['productfields'][$_nef]) and count($post['productfields'][$_nef]) > 0){
-								if ($v->multilist == 1 || ($v->multilist == 0 and !in_array(0,$post['productfields'][$_nef]))){
-									$product->set($_nef, implode(',', $post['productfields'][$_nef]));
-                                }
-							}
-						break;
-						case 1:
-							if (isset($post[$_nef]) and $post[$_nef] != ''){
-								$product->set($_nef, $post[$_nef]);
-                            }
-						break;
-					}
-				}
-			}
-            $_products->updatePriceAndQtyDependAttr($id, $post);
-            $product->store();
-            
-            if ($post['product_price']!=""){
-                $mprice = $product->getMinimumPrice();
-                $product->set('min_price', $mprice);
-            }
-            if (!$product->unlimited){
-                $qty = $product->getFullQty();
-                $product->set('product_quantity', $qty);
-            }
-			$product->date_modify = getJsDate();
-            $product->store();
-            unset($product);
+			$model->productGroupUpdate($id, $post);            
         }
-
         $dispatcher->trigger('onAfterSaveListProductEnd', array($cid, $post) );
         $this->setRedirect("index.php?option=com_jshopping&controller=products", _JSHOP_PRODUCT_SAVED);
     }

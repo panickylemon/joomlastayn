@@ -82,24 +82,3 @@ jQuery(document).ready(function($){
 
 });
 
-
-
-jQuery(document).ready(function($) {
-
-    $(".owl-thumbs").owlCarousel({
-        loop:true,
-        nav: true,
-        navText: ["<img src='/joomlastayn/templates/mytemplate/owl-carousel/img/left.png'>","<img" +
-        " src='/joomlastayn/templates/mytemplate/owl-carousel/img/right.png'>"],
-        smartSpeed:300,
-        dots: false,
-        items : 4,
-        margin: 2,
-    });
-
-    $("#glass").click(function() {
-        $("#jshop_search").focus();
-    })
-
-});
-

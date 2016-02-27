@@ -9,6 +9,7 @@ include_once(JPATH_JOOMSHOPPING."/lib/multilangfield.php");
 include_once(JPATH_JOOMSHOPPING."/tables/config.php");
 require_once(JPATH_JOOMSHOPPING."/lib/functions.php");
 require_once(JPATH_JOOMSHOPPING."/lib/shop_item_menu.php");
+require_once(JPATH_JOOMSHOPPING."/lib/jsuri.php");
 require_once(JPATH_JOOMSHOPPING."/models/base.php");
 include_once(JPATH_JOOMSHOPPING."/payments/payment.php");
 include_once(JPATH_JOOMSHOPPING."/shippingform/shippingform.php");

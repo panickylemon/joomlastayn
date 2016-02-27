@@ -381,6 +381,7 @@ var userinfo_link = "<?php print "index.php?option=com_jshopping&controller=user
    <input type="hidden" name="delivery_times_id[<?php echo $i?>]" value="<?php echo $item->delivery_times_id?>" />
    <input type="hidden" name="thumb_image[<?php echo $i?>]" value="<?php echo $item->thumb_image?>" />
    <input type="hidden" name="attributes[<?php echo $i?>]" value="<?php echo $item->attributes?>" />
+   <?php print $item->_ext_attribute_html;?>
    <?php if ($this->config->admin_order_edit_more){?>
    <div>
    <?php echo _JSHOP_PRODUCT_WEIGHT?> <input type="text" name="weight[<?php echo $i?>]" value="<?php echo $item->weight?>" />

@@ -1,6 +1,6 @@
 <?php
 /**
-* @version      4.11.0 18.12.2014
+* @version      4.11.5 18.12.2014
 * @author       MAXXmarketing GmbH
 * @package      Jshopping
 * @copyright    Copyright (C) 2010 webdesigner-profi.de. All rights reserved.
@@ -42,5 +42,6 @@ class jshopUserGroup extends JTable{
 		if ($name==''){
 			$name = $thid->usergroup_name;
 		}
+		return $name;
     }
 }

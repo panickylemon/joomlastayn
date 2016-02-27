@@ -26,7 +26,13 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 <html xmlns:jdoc="http://www.w3.org/2001/XInclude">
 <head>
 	<script type="text/javascript"
-	        src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js"></script>
+	        src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js">
+	</script>
+
+	<script type="text/javascript" charset="utf-8"
+	        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=859iOciZtdumK_UA6kdjkPHqfyt3oBEW&width=100%&height=350&id=map_office">
+	</script>
+
 	<jdoc:include type="head"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -100,7 +106,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 	</header>
 
 	<div class="wrap_content_all_page">
-		<jdoc:include type="modules" name="form-1"/>
+<!--		<jdoc:include type="modules" name="form-1"/>-->
 
 
 		<div class="list_categories col-md-2 col-sm-3 col-xs-12">
@@ -108,13 +114,18 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 		</div>
 
 
-		<jdoc:include type="modules" name="feedback"/>
-
 
 		<div class="main-heading"></div>
 		<jdoc:include type="message"/>
 		<jdoc:include type="component"/>
+
+		<div class="contacts_feedback">
+			<h2>Форма обратной связи</h2>
+			<jdoc:include type="modules" name="feedback"/>
+		</div>
 	</div>
+
+
 </div>
 
 <footer class="footer">
