@@ -1220,10 +1220,11 @@ div.jshop_register{
 
 .item-page .wrap_contacts{
 	line-height: 1.2;
-	float: left;
+	float: right;
 	width: 49%;
 	border: 0px solid #000000;
 	margin-bottom: 100px;
+	padding-left: 30px;
 }
 
 .wrap_contacts h1{
@@ -1248,12 +1249,12 @@ div.jshop_register{
 }
 
 .contacts_feedback{
-	float: right;
-	width: 40%;
-	padding: 0 20px 0px;
+	float: left;
+	width: 45%;
+	padding: 0 20px;
 	border: 1px solid #000000;
-	margin-bottom: 5px;
-	margin-right: 10px;
+	margin-top: -10px;
+	margin-left: 10px;
 }
 
 .contacts_feedback h2{

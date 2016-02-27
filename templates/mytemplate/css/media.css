@@ -44,6 +44,13 @@
 	.owl-theme .owl-controls{
 		margin-top: -17%;
 	}
+
+	.contacts_feedback{
+		width: 60%;
+	}
+	.item-page .wrap_contacts{
+		width: 38%;
+	}
 }
 
 
@@ -141,6 +148,20 @@
 	}
 	.owl-prev{
 		margin-left: -11px;
+	}
+
+	.contacts_feedback{
+		width: 100%;
+		margin: -10px 0 30px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: none;
+	}
+	.item-page .wrap_contacts{
+		width: 100%;
+		padding-left: 10px;
+		margin-bottom: 15px;
 	}
 }
 
@@ -302,8 +323,14 @@
 	.item-page img{
 		width: 100%;
 	}
-	.how_order img{
+	.how_order img, .item-page .wrap_contacts img{
 		width: 32px;
+	}
+	.item-page .wrap_contacts{
+		padding-left: 0;
+	}
+	.contacts_feedback{
+		padding: 0 8px;
 	}
 }
 
