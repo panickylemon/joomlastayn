@@ -120,7 +120,6 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 		<jdoc:include type="component"/>
 
 		<div class="contacts_feedback">
-			<h2>Форма обратной связи</h2>
 			<jdoc:include type="modules" name="feedback"/>
 		</div>
 	</div>

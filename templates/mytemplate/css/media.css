@@ -156,8 +156,13 @@
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
+
+	}
+
+	.feedback_border{
 		border: none;
 	}
+
 	.item-page .wrap_contacts{
 		width: 100%;
 		padding-left: 10px;
@@ -329,7 +334,7 @@
 	.item-page .wrap_contacts{
 		padding-left: 0;
 	}
-	.contacts_feedback{
+	.feedback_border{
 		padding: 0 8px;
 	}
 }

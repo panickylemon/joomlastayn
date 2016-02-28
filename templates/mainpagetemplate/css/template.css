@@ -529,6 +529,10 @@ footer {
 	min-height: 35px;
 }
 
+.title_feedback{
+	display: none;
+}
+
 .controls .input-80{
 	max-width: 100%;
 }

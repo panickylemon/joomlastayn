@@ -1,53 +1,121 @@
-<?php
-/**
- * @package Module Responsive Contact Form for Joomla! 3.x
- * @version 3.0: mod_responsive_contact_form.php Novembar,2013
- * @author Joomla Drive Team
- * @copyright (C) 2013- Joomla Drive
- * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
- **/
+<div class="feedback_border">
 
-defined('_JEXEC') or die;
+	<h2 class="title_feedback">Форма обратной связи</h2>
 
-$document = JFactory::getDocument();
+	<?php
+	/**
+	 * @package Module Responsive Contact Form for Joomla! 3.x
+	 * @version 3.0: mod_responsive_contact_form.php Novembar,2013
+	 * @author Joomla Drive Team
+	 * @copyright (C) 2013- Joomla Drive
+	 * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+	 **/
 
-$document->addScriptDeclaration('jQuery.noConflict();');
+	defined('_JEXEC') or die;
 
-// Javascript
-$document->addScript('//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js');
-$document->addScript(JURI::base(true) . '/modules/mod_responsive_contact_form/js/jqBootstrapValidation.min.js');
+	$document = JFactory::getDocument();
 
-$document->addScriptDeclaration('jQuery(function () { jQuery("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );');
+	$document->addScriptDeclaration('jQuery.noConflict();');
 
-// Stylesheet
-$document->addStylesheet(JURI::base(true) . '/modules/mod_responsive_contact_form/css/style.css');
+	// Javascript
+	$document->addScript('//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js');
+	$document->addScript(JURI::base(true) . '/modules/mod_responsive_contact_form/js/jqBootstrapValidation.min.js');
 
-require_once('modules/mod_responsive_contact_form/formkey_class.php');
-require_once('modules/mod_responsive_contact_form/recaptchalib.php');
+	$document->addScriptDeclaration('jQuery(function () { jQuery("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );');
 
-$formKey = new formKey();
+	// Stylesheet
+	$document->addStylesheet(JURI::base(true) . '/modules/mod_responsive_contact_form/css/style.css');
 
-if ($_SERVER['REQUEST_METHOD'] == 'post') {
-	// Validate the form key
-	if (!isset($_POST['form_key']) || !$formKey->validate()) {
-		// Form key is invalid, show an error
-		$error = "Something went wrong. Please try again."; // kill program and return error message
+	require_once('modules/mod_responsive_contact_form/formkey_class.php');
+	require_once('modules/mod_responsive_contact_form/recaptchalib.php');
+
+	$formKey = new formKey();
+
+	if ($_SERVER['REQUEST_METHOD'] == 'post') {
+		// Validate the form key
+		if (!isset($_POST['form_key']) || !$formKey->validate()) {
+			// Form key is invalid, show an error
+			$error = "Something went wrong. Please try again."; // kill program and return error message
+		}
 	}
-}
 
-if (isset($_POST['sbutton'])) {
-	$captcha_req = $params->get('captcha_req');
-	if ($captcha_req == 1) {
-		$private_key = $params->get('private_key');
+	if (isset($_POST['sbutton'])) {
+		$captcha_req = $params->get('captcha_req');
+		if ($captcha_req == 1) {
+			$private_key = $params->get('private_key');
 
-		$resp = recaptcha_check_answer($private_key, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
+			$resp = recaptcha_check_answer($private_key, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 
-		if (!$resp->is_valid) {
-			// What happens when the CAPTCHA was entered incorrectly
-			echo "<script>javascript:Recaptcha.reload();</script>"; // reload captcha
-			$error = "Sorry, the verification code wasn't entered correctly. Try again."; // kill program and return error message
+			if (!$resp->is_valid) {
+				// What happens when the CAPTCHA was entered incorrectly
+				echo "<script>javascript:Recaptcha.reload();</script>"; // reload captcha
+				$error = "Sorry, the verification code wasn't entered correctly. Try again."; // kill program and return error message
+			} else {
+
+				// Requesting form elements
+				if (isset($_POST['email']))
+					$email = $_POST['email'];
+
+				$name = $_POST['name'];
+
+				if (isset($_POST['phone']))
+					$phone = $_POST['phone'];
+				if (isset($_POST['type']))
+					$type = $_POST['type'];
+				if (isset($_POST['message']))
+					$message = $_POST['message'];
+
+				// Requesting Configuration elements
+				$admin_email = $params->get('admin_email');
+				$cc_email = $params->get('cc_email');
+				$bcc_email = $params->get('bcc_email');
+				$success_notify = $params->get('success_notify');
+				$failure_notify = $params->get('failure_notify');
+				$ffield_name = $params->get('ffield_name');
+				$sfield_name = $params->get('sfield_name');
+				$tfield_name = $params->get('tfield_name');
+				$fofield_name = $params->get('fofield_name');
+				$fifield_name = $params->get('fifield_name');
+
+				// Building Mail Content
+				$formcontent = "\n" . $ffield_name . ": $name";
+				if (isset($email)) {
+					$formcontent .= "\n\n" . $sfield_name . ": $email";
+				}
+				if (isset($phone)) {
+					$formcontent .= "\n\n" . $tfield_name . ": $phone";
+				}
+				if (isset($type)) {
+					$formcontent .= "\n\n" . $fofield_name . ": $type";
+				}
+				if (isset($message)) {
+					$formcontent .= "\n\n" . $fifield_name . ": $message";
+				}
+
+				// Enter a subject, only you will see this so make it useful
+				$subject = $name . " Contacted through " . $_SERVER['HTTP_HOST'];
+				if (isset($type)) {
+					$subject .= " for $type";
+				}
+				if (isset($_POST['email']))
+					$sender = array($email, $name);
+				else
+					$sender = $name;
+
+				// Mail Configuration
+				$mail = JFactory::getMailer();
+				$mail->setSender($sender);
+				$mail->addRecipient($admin_email);
+				if (isset($cc_email))
+					$mail->addCC($cc_email);
+				if (isset($bcc_email))
+					$mail->addBCC($bcc_email);
+				$mail->setSubject($subject);
+				$mail->Encoding = 'base64';
+				$mail->setBody($formcontent);
+				$status = $mail->Send();
+			}
 		} else {
-
 			// Requesting form elements
 			if (isset($_POST['email']))
 				$email = $_POST['email'];
@@ -111,230 +179,177 @@ if (isset($_POST['sbutton'])) {
 			$mail->setBody($formcontent);
 			$status = $mail->Send();
 		}
-	} else {
-		// Requesting form elements
-		if (isset($_POST['email']))
-			$email = $_POST['email'];
-
-		$name = $_POST['name'];
-
-		if (isset($_POST['phone']))
-			$phone = $_POST['phone'];
-		if (isset($_POST['type']))
-			$type = $_POST['type'];
-		if (isset($_POST['message']))
-			$message = $_POST['message'];
-
-		// Requesting Configuration elements
-		$admin_email = $params->get('admin_email');
-		$cc_email = $params->get('cc_email');
-		$bcc_email = $params->get('bcc_email');
-		$success_notify = $params->get('success_notify');
-		$failure_notify = $params->get('failure_notify');
-		$ffield_name = $params->get('ffield_name');
-		$sfield_name = $params->get('sfield_name');
-		$tfield_name = $params->get('tfield_name');
-		$fofield_name = $params->get('fofield_name');
-		$fifield_name = $params->get('fifield_name');
-
-		// Building Mail Content
-		$formcontent = "\n" . $ffield_name . ": $name";
-		if (isset($email)) {
-			$formcontent .= "\n\n" . $sfield_name . ": $email";
-		}
-		if (isset($phone)) {
-			$formcontent .= "\n\n" . $tfield_name . ": $phone";
-		}
-		if (isset($type)) {
-			$formcontent .= "\n\n" . $fofield_name . ": $type";
-		}
-		if (isset($message)) {
-			$formcontent .= "\n\n" . $fifield_name . ": $message";
-		}
-
-		// Enter a subject, only you will see this so make it useful
-		$subject = $name . " Contacted through " . $_SERVER['HTTP_HOST'];
-		if (isset($type)) {
-			$subject .= " for $type";
-		}
-		if (isset($_POST['email']))
-			$sender = array($email, $name);
-		else
-			$sender = $name;
-
-		// Mail Configuration
-		$mail = JFactory::getMailer();
-		$mail->setSender($sender);
-		$mail->addRecipient($admin_email);
-		if (isset($cc_email))
-			$mail->addCC($cc_email);
-		if (isset($bcc_email))
-			$mail->addBCC($bcc_email);
-		$mail->setSubject($subject);
-		$mail->Encoding = 'base64';
-		$mail->setBody($formcontent);
-		$status = $mail->Send();
 	}
-}
-?>
-<section id="contact">
-	<script type="text/javascript">
-		var RecaptchaOptions = {
-			theme: "<?php echo $params->get('captcha_theme');?>"
-		};
-	</script>
-	<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST" class="form-horizontal" id="contact-form"
-	      novalidate>
-		<?php $formKey->outputKey(); ?>
-		<fieldset>
-			<!-- Alert Box-->
-<!--			--><?php //if (isset ($status)) { ?>
-<!--				<div-->
-<!--					class="alert --><?php //if ($status !== true) { ?><!-- alert-error --><?php //} else { ?><!-- alert-success --><?php //} ?><!--">-->
-<!--					<button type="button" class="close" data-dismiss="alert">&times;</button>-->
-<!--					<strong>--><?php //if ($status !== true) {
-//							echo $failure_notify;
-//						} else {
-//							echo $success_notify;
-//						} ?><!--</strong> <br/> --><?php //if ($status !== true) {
-//						echo $status;
-//					} ?>
-<!--				</div>-->
-<!--			--><?php //} ?>
+	?>
+	<section id="contact">
+		<script type="text/javascript">
+			var RecaptchaOptions = {
+				theme: "<?php echo $params->get('captcha_theme');?>"
+			};
+		</script>
 
-			<?php if (isset ($error)) { ?>
-				<div class="alert alert-error">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<strong> <?= $error; ?></strong>
-				</div>
-			<?php } ?>
 
-			<!-- Name Field -->
-			<div class="wrap_one_line_form">
-			<div class="wrap_input_feedback">
-				<div class="control-group">
-					<label class="control-label" for="inputName"><?php echo $params->get('ffield_name'); ?></label>
+		<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST" class="form-horizontal" id="contact-form"
+		      novalidate>
+			<?php $formKey->outputKey(); ?>
+			<fieldset>
+				<!-- Alert Box-->
+				<!--			--><?php //if (isset ($status)) { ?>
+				<!--				<div-->
+				<!--					class="alert --><?php //if ($status !== true) { ?><!-- alert-error -->
+				<?php //} else { ?><!-- alert-success --><?php //} ?><!--">-->
+				<!--					<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+				<!--					<strong>--><?php //if ($status !== true) {
+				//							echo $failure_notify;
+				//						} else {
+				//							echo $success_notify;
+				//						} ?><!--</strong> <br/> --><?php //if ($status !== true) {
+				//						echo $status;
+				//					} ?>
+				<!--				</div>-->
+				<!--			--><?php //} ?>
 
-					<div class="controls">
-						<input class="input-80" name="name" type="text" id="inputName" autocomplete="off"
-						       placeholder="<?php echo $params->get('ffield_name'); ?>" required>
-
-						<p class="help-block"></p>
+				<?php if (isset ($error)) { ?>
+					<div class="alert alert-error">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<strong> <?= $error; ?></strong>
 					</div>
-				</div>
-			</div>
+				<?php } ?>
 
-			<!-- E-mail Field -->
-			<?php if ($params->get('email_publish')) { ?>
-				<div class="control-group">
-					<label class="control-label" for="inputEmail"><?php echo $params->get('sfield_name'); ?></label>
+				<!-- Name Field -->
+				<div class="wrap_one_line_form">
+					<div class="wrap_input_feedback">
+						<div class="control-group">
+							<label class="control-label"
+							       for="inputName"><?php echo $params->get('ffield_name'); ?></label>
 
-					<div class="controls">
-						<input class="input-80" name="email" type="email" id="inputEmail" autocomplete="off"
-						       placeholder="<?php echo $params->get('sfield_name'); ?>" <?php echo $params->get('email_req'); ?>>
+							<div class="controls">
+								<input class="input-80" name="name" type="text" id="inputName" autocomplete="off"
+								       placeholder="<?php echo $params->get('ffield_name'); ?>" required>
 
-						<p class="help-block"></p>
+								<p class="help-block"></p>
+							</div>
+						</div>
 					</div>
-				</div>
 
-			<?php } ?>
-			<?php if ($params->get('phone_publish')) {
-				?>
-				<!-- Phone Field -->
-				<div class="wrap_input_feedback phone_wrap">
+					<!-- E-mail Field -->
+					<?php if ($params->get('email_publish')) { ?>
+						<div class="control-group">
+							<label class="control-label"
+							       for="inputEmail"><?php echo $params->get('sfield_name'); ?></label>
+
+							<div class="controls">
+								<input class="input-80" name="email" type="email" id="inputEmail" autocomplete="off"
+								       placeholder="<?php echo $params->get('sfield_name'); ?>" <?php echo $params->get('email_req'); ?>>
+
+								<p class="help-block"></p>
+							</div>
+						</div>
+
+					<?php } ?>
+					<?php if ($params->get('phone_publish')) {
+						?>
+						<!-- Phone Field -->
+						<div class="wrap_input_feedback phone_wrap">
+							<div class="control-group">
+								<label class="control-label"
+								       for="inputPhone"><?php echo $params->get('tfield_name'); ?></label>
+
+								<div class="controls">
+									<input class="input-80" name="phone" type="text" id="inputPhone" autocomplete="off"
+									       placeholder="<?php echo $params->get('tfield_name'); ?>" <?php echo $params->get('phone_req'); ?>>
+
+									<p class="help-block"></p>
+								</div>
+							</div>
+						</div>
+
+					<?php } ?>
+				</div>
+				<?php if ($params->get('subject_publish')) { ?>
+
+					<!-- Subject Field -->
 					<div class="control-group">
-						<label class="control-label" for="inputPhone"><?php echo $params->get('tfield_name'); ?></label>
+						<label class="control-label"
+						       for="selectSubject"><?php echo $params->get('fofield_name'); ?></label>
 
 						<div class="controls">
-							<input class="input-80" name="phone" type="text" id="inputPhone" autocomplete="off"
-							       placeholder="<?php echo $params->get('tfield_name'); ?>" <?php echo $params->get('phone_req'); ?>>
+							<?php if ($params->get('subject_type') == 1) { ?>
+								<select class="input-80" id="selectSubject" name="type">
+									<option value="question">Question</option>
+									<option value="support">Comments</option>
+									<option value="misc">Other</option>
+								</select>
+								<?php
+							} else {
+								?>
+								<input class="input-80" name="type" type="text" id="selectSubject"
+								       placeholder="<?php echo $params->get('fofield_name'); ?>" required>
+								<p class="help-block"></p>
+								<?php
+							}
+							?>
+						</div>
+					</div>
+					<?php
+				}
+				if ($params->get('message_publish')) {
+					?>
+
+					<!-- Message Field -->
+					<div class="control-group">
+						<label class="control-label"
+						       for="inputMessage"><?php echo $params->get('fifield_name'); ?></label>
+
+						<div class="controls">
+			  <textarea class="input-80" name="message" rows="12" id="inputMessage" placeholder="Ваше сообщение"
+			            autocomplete="off"
+			            minlength="<?php
+			            echo $params->get('msg_minlength'); ?>" required></textarea>
 
 							<p class="help-block"></p>
 						</div>
 					</div>
-				</div>
+					<?php
+				}
+				if ($params->get('captcha_req') == 1) {
+					?>
 
-			<?php } ?>
-			</div>
-			<?php if ($params->get('subject_publish')) {?>
+					<!-- Captcha Field -->
+					<div class="control-group">
+						<label class="control-label" for="recaptcha">Are you human?</label>
 
-				<!-- Subject Field -->
-				<div class="control-group">
-					<label class="control-label" for="selectSubject"><?php echo $params->get('fofield_name'); ?></label>
-
-					<div class="controls">
-						<?php if ($params->get('subject_type') == 1) { ?>
-							<select class="input-80" id="selectSubject" name="type">
-								<option value="question">Question</option>
-								<option value="support">Comments</option>
-								<option value="misc">Other</option>
-							</select>
-							<?php
-						} else {
-							?>
-							<input class="input-80" name="type" type="text" id="selectSubject"
-							       placeholder="<?php echo $params->get('fofield_name'); ?>" required>
-							<p class="help-block"></p>
-							<?php
-						}
-						?>
+						<div class="controls" id="recaptcha">
+							<p>
+								<?php
+								$publickey = $params->get('public_key'); // Add your own public key here
+								echo recaptcha_get_html($publickey);
+								?>
+							</p>
+						</div>
 					</div>
-				</div>
-				<?php
-			}
-			if ($params->get('message_publish')) {
-				?>
+					<?php
+				}
+				if ($params->get('admin_email')) {
+					?>
 
-				<!-- Message Field -->
-				<div class="control-group">
-					<label class="control-label" for="inputMessage"><?php echo $params->get('fifield_name'); ?></label>
-
-					<div class="controls">
-			  <textarea class="input-80" name="message" rows="12" id="inputMessage" placeholder="Ваше сообщение" autocomplete="off"
-			            minlength="<?php
-			            echo $params->get('msg_minlength'); ?>" required></textarea>
-
-						<p class="help-block"></p>
+					<!-- Submit Button -->
+					<div class="control-group">
+						<div class="controls">
+							<button type="submit" name="sbutton" value="Send"
+							        class="button_feedback <?php echo $params->get('button_color'); ?>"><?php echo
+								$params->get('bs_name'); ?></button>
+						</div>
 					</div>
-				</div>
-				<?php
-			}
-			if ($params->get('captcha_req') == 1) {
+					<?php
+				} else {
+					?>
+					<p style="font-type:bold">Please Enter Admin E-Mail address in the backend.</p>
+					<?php
+				}
 				?>
+			</fieldset>
+		</form>
+	</section>
 
-				<!-- Captcha Field -->
-				<div class="control-group">
-					<label class="control-label" for="recaptcha">Are you human?</label>
-
-					<div class="controls" id="recaptcha">
-						<p>
-							<?php
-							$publickey = $params->get('public_key'); // Add your own public key here
-							echo recaptcha_get_html($publickey);
-							?>
-						</p>
-					</div>
-				</div>
-				<?php
-			}
-			if ($params->get('admin_email')) {
-				?>
-
-				<!-- Submit Button -->
-				<div class="control-group">
-					<div class="controls">
-						<button type="submit" name="sbutton" value="Send"
-						        class="button_feedback <?php echo $params->get('button_color'); ?>"><?php echo
-							$params->get('bs_name'); ?></button>
-					</div>
-				</div>
-				<?php
-			} else {
-				?>
-				<p style="font-type:bold">Please Enter Admin E-Mail address in the backend.</p>
-				<?php
-			}
-			?>
-		</fieldset>
-	</form>
-</section>
+</div>
