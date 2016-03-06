@@ -17,7 +17,7 @@ if (!empty($arResult)):
 			</a>
 		</div>
 	</div>
-	<a href="/joomlastayn/index.php/shop/"><p class="title_all_categories">Все категории</p></a>
+	<a href="/index.php/shop/"><p class="title_all_categories">Все категории</p></a>
 
 <ul class="odcat <?php if($class){ echo $class;}?>">
 <?php 
@@ -31,18 +31,14 @@ foreach($arResult as $arItem):
 		<?php if ($arItem["DEPTH"] == 1):?>
 			<li>
 				<a href="<?php echo $arItem["LINK"]?>" class="root parent<?php if ($arItem["SELECTED"]):?> selected<?php endif?>">
-					<div><?if(($display_img == 1) and $arItem["IMG"]):?>
-					<img src="<?php echo $jshopConfig->image_category_live_path."/".$arItem["IMG"]?>">
-					<?endif?>
+					<div>
 					<?php echo $arItem["NAME"]?><?php if($count){echo ' ('.$arItem["COUNT"].')';}?></div>
 				</a>
 				<ul class="odsubcat-<?php echo $arItem["DEPTH"]?>">
 		<?php else:?>
 			<li>
 				<a href="<?php echo $arItem["LINK"]?>" class="parent<?php if ($arItem["SELECTED"]):?> selected<?php endif?>">
-					<div><?if(($display_img == 1) and $arItem["IMG"]):?>
-					<img src="<?php echo $jshopConfig->image_category_live_path."/".$arItem["IMG"]?>">
-					<?endif?>
+					<div>
 					<?php echo $arItem["NAME"]?><?php if($count){echo ' ('.$arItem["COUNT"].')';}?></div>
 				</a>
 				<ul class="odsubcat-<?php echo $arItem["DEPTH"]?>">
@@ -51,18 +47,14 @@ foreach($arResult as $arItem):
 			<?php if ($arItem["DEPTH"] == 1):?>
 				<li>
 					<a href="<?php echo $arItem["LINK"]?>" class="root<?php if ($arItem["SELECTED"]):?> selected<?php endif?>">
-						<div><?if(($display_img == 1) and $arItem["IMG"]):?>
-						<img src="<?php echo $jshopConfig->image_category_live_path."/".$arItem["IMG"]?>">
-						<?endif?>
+						<div>
 						<?php echo $arItem["NAME"]?><?php if($count){echo ' ('.$arItem["COUNT"].')';}?></div>
 					</a>
 				</li>
 			<?php else:?>
 				<li>
 					<a href="<?php echo $arItem["LINK"]?>" <?php if ($arItem["SELECTED"]):?>class="selected"<?php endif?>>
-						<div><?if(($display_img == 1) and $arItem["IMG"]):?>
-						<img src="<?php echo $jshopConfig->image_category_live_path."/".$arItem["IMG"]?>">
-						<?endif?>
+						<div>
 						<?php echo $arItem["NAME"]?><?php if($count){echo ' ('.$arItem["COUNT"].')';}?></div>
 					</a>
 				</li>
