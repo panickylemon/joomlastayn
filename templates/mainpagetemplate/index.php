@@ -50,10 +50,10 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 			<div class="nav">
 				<ul class="menu menu_left left">
 					<li class="left">
-						<div><a class="menu_left_first" href="/joomlastayn/index.php/shop/">МАГАЗИН</a></div>
+						<div><a class="menu_left_first" href="/index.php/shop/">МАГАЗИН</a></div>
 					</li>
 					<li class="right">
-						<div><a href="/joomlastayn/index.php/blog">БЛОГ</a></div>
+						<div><a href="/index.php/blog">БЛОГ</a></div>
 					</li>
 				</ul>
 
@@ -64,10 +64,10 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 
 				<ul class="menu menu_right right">
 					<li class="left">
-						<div><a href="/joomlastayn/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
+						<div><a href="/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
 					</li>
 					<li class="right">
-						<div><a class="menu_right_last" href="/joomlastayn/index.php/contacts/">КОНТАКТЫ</a></div>
+						<div><a class="menu_right_last" href="/index.php/contacts/">КОНТАКТЫ</a></div>
 					</li>
 				</ul>
 				<div class="burger_menu">
@@ -80,16 +80,16 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 			<div class="nav_mobile">
 				<ul class="menu_mobile">
 					<li class="">
-						<div><a href="#">МАГАЗИН</a></div>
+						<div><a href="/index.php/shop/">МАГАЗИН</a></div>
 					</li>
 					<li class="">
-						<div><a href="#">БЛОГ</a></div>
+						<div><a href="/index.php/blog">БЛОГ</a></div>
 					</li>
 					<li class="">
-						<div><a href="#">КАК ЗАКАЗАТЬ</a></div>
+						<div><a href="/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
 					</li>
 					<li class="">
-						<div><a href="#">КОНТАКТЫ</a></div>
+						<div><a href="/index.php/contacts/">КОНТАКТЫ</a></div>
 					</li>
 				</ul>
 			</div>
@@ -112,16 +112,16 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 			<div class="menu_footer left">
 				<ul>
 					<li>
-						<div><a href="/joomlastayn/index.php/shop/">МАГАЗИН</a></div>
+						<div><a href="/index.php/shop/">МАГАЗИН</a></div>
 					</li>
 					<li>
-						<div><a href="/joomlastayn/index.php/blog/">БЛОГ</a></div>
+						<div><a href="/index.php/blog/">БЛОГ</a></div>
 					</li>
 					<li>
-						<div><a href="/joomlastayn/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
+						<div><a href="/index.php/how-buy/">КАК ЗАКАЗАТЬ</a></div>
 					</li>
 					<li>
-						<div><a href="/joomlastayn/index.php/contacts/">КОНТАКТЫ</a></div>
+						<div><a href="/index.php/contacts/">КОНТАКТЫ</a></div>
 					</li>
 				</ul>
 			</div>

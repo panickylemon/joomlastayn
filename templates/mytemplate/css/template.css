@@ -835,6 +835,7 @@ div.jshop_prod_attributes{
 }
 div.jshop_prod_attributes select, .jshop .prod_qty_input input{
 	outline: none;
+	background: white;
 }
 .productfull{
 	margin-bottom: 50px;
