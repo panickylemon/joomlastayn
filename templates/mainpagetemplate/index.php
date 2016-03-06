@@ -58,7 +58,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 				</ul>
 
 				<div class="logo">
-					<div><a href="/joomlastayn/index.php/"><img src="/joomlastayn/templates/mytemplate/images/logo.png"
+					<div><a href="/index.php/"><img src="/joomlastayn/templates/mytemplate/images/logo.png"
 					                                            alt="логотип"></a></div>
 				</div>
 
