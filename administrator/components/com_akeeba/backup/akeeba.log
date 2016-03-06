@@ -1,0 +1,82 @@
+DEBUG   |160304 09:35:13|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:13|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:13|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:13|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:14|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:14|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:16|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:16|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:17|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:17|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:23|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:23|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:23|Closing SQL dump file.
+DEBUG   |160304 09:35:23|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:23|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:23|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:23|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:23|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:23|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:23|Closing SQL dump file.
+DEBUG   |160304 09:35:26|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:26|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:26|Closing SQL dump file.
+DEBUG   |160304 09:35:30|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:30|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:30|Closing SQL dump file.
+DEBUG   |160304 09:35:49|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:49|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:49|Closing SQL dump file.
+DEBUG   |160304 09:35:59|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:35:59|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:35:59|Closing SQL dump file.
+DEBUG   |160304 09:36:11|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:36:11|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:36:11|Closing SQL dump file.
+DEBUG   |160304 09:36:30|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:36:30|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:36:30|Closing SQL dump file.
+DEBUG   |160304 09:36:50|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:36:50|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:36:50|Closing SQL dump file.
+DEBUG   |160304 09:37:00|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:37:00|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:37:00|Closing SQL dump file.
+DEBUG   |160304 09:37:17|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:37:17|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:37:17|Closing SQL dump file.
+DEBUG   |160304 09:37:35|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:37:35|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:37:35|Closing SQL dump file.
+DEBUG   |160304 09:37:36|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:37:36|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:37:36|Closing SQL dump file.
+DEBUG   |160304 09:37:55|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:37:55|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:37:55|Closing SQL dump file.
+DEBUG   |160304 09:38:01|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:01|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:01|Closing SQL dump file.
+DEBUG   |160304 09:38:06|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:06|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:06|Closing SQL dump file.
+DEBUG   |160304 09:38:25|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:25|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:25|Closing SQL dump file.
+DEBUG   |160304 09:38:45|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:45|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:45|Closing SQL dump file.
+DEBUG   |160304 09:38:51|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:51|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:51|Closing SQL dump file.
+DEBUG   |160304 09:38:52|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:52|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:52|Closing SQL dump file.
+DEBUG   |160304 09:38:53|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:53|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:53|Closing SQL dump file.
+DEBUG   |160304 09:38:54|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:54|mysql_close(): 63 is not a valid MySQL-Link resource
+DEBUG   |160304 09:38:54|Closing SQL dump file.
+DEBUG   |160304 09:38:55|PHP WARNING (not an error; you can ignore) on line 143 in file <root>\administrator\components\com_akeeba\engine\Driver\Mysql.php:
+DEBUG   |160304 09:38:55|mysql_close(): 63 is not a valid MySQL-Link resource

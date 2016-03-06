@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" method="upgrade" group="jshoppingproducts">
+	<name>JoomShopping - Jquery Image Zoom</name>
+	<author>Brooksus</author>
+	<creationDate>06/05/2014</creationDate>
+	<copyright>Copyright by Brooksite.ru. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL + http://zoomsl.tw1.ru/license/</license>
+	<authorEmail>brooksus@yandex.ru</authorEmail>
+	<authorUrl>http://brooksite.ru/</authorUrl>
+    <version>3.0.3</version>
+	<description>Jquery Image Zoom for Joomshopping</description>
+	<files>
+		<filename plugin="jqzoom">jqzoom.php</filename>
+			<filename>index.html</filename>
+		<filename>jqzoom.css</filename>
+		<filename>zoomsl-3.0.min.js</filename>
+		<filename>jquery.elevatezoom.min.js</filename>
+		<folder>element</folder>
+	</files>
+	
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+		<field
+			name="jq_lib"
+			type="radio"
+			default="0"
+			label="Использовать библиотеку"
+			description="Использовать в списке товаров"
+			filter="">
+			<option value="0">Zoomer v3.0</option>
+			<option value="1">EleavateZoom</option>
+   </field>
+		<field
+			name="jshop_list_use"
+			type="radio"
+			default="0"
+			label="Использовать в списке товаров"
+			description="Использовать в списке товаров"
+			filter="">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+   </field>
+			
+		<field type="spacer" hr="true"/>
+		<field name="spacer_02_0" type="spacer" default="" label="Параметры для Списка товаров" description=""/>
+		<field
+			name="zoom_type_list"
+			type="radio"
+			default="1"
+			label="Вид увеличения"
+			description="Вид увкличения изображения (отдельное окно, внутри окна, увеличительное стекло) (Для списка товаров)"
+			filter="">
+			<option value="1">Снаружи</option>
+			<option value="2">Внутри</option>
+   <option value="3">Лупа</option>
+			</field>
+			
+			<field
+			name="zoom_start_list"
+			type="text"
+			default="3"
+			label="Начальное увеличение"
+			description="Начальное увеличение (Для списка товаров)"
+			required="true"
+			filter="int"
+			size="20"
+			 />
+							
+		<field type="spacer" hr="true"/>
+		<field name="spacer_02_1" type="spacer" default="" label="Параметры для Вида увеличения - Снаружи:" description=""/>
+		<field
+			name="zoom_wind_width_list"
+			type="text"
+			default="350"
+			label="Ширина окна"
+			description="Размер окна в px (только число) (Для списка товаров)"
+			required="true"
+			filter="int"
+			size="40"
+			 />
+			<field
+			name="zoom_wind_height_list"
+			type="text"
+			default="350"
+			label="Высота окна"
+			description="Размер окна в px (только число) (Для списка товаров)"
+			required="true"
+			filter="int"
+			size="40"
+			 />
+				
+			<field
+			name="zoom_wind_pos_list"
+			type="radio"
+			default="1"
+			label="Положение окна"
+			description="Положжение окна (справа, слева) (Для списка товаров)"
+			filter="">
+			<option value="1">Справа</option>
+			<option value="2">Слева</option>
+   </field>	
+			
+			<field
+			name="zoom_wind_title_list"
+			type="radio"
+			default="1"
+			label="Описание изображения"
+			description="Показать / скрыть описание изображения (только для вида окна - снаружи) (Для списка товаров)"
+			filter="">
+			<option value="1">Показать</option>
+			<option value="2">Скрыть</option>
+   </field>	
+							
+			<field type="spacer" hr="true"/>
+		 <field name="spacer_02" type="spacer" default="" label="Параметры для Вида увеличения - Лупа:" description=""/>
+			<field
+			name="lens_size_list"
+			type="text"
+			default="100"
+			label="Размер увеличительного стекла"
+			description="Размер увеличительного стекла в px (только число) (Для списка товаров)"
+			required="true"
+			filter="int"
+			size="20"
+			 />
+		
+		<field type="spacer" hr="true"/>
+		<field type="spacer" hr="true"/>
+		<field type="spacer" hr="true"/>
+		<field type="spacer" hr="true"/>
+		<field
+			name="jshop_use"
+			type="radio"
+			default="1"
+			label="Использовать в карточке товара"
+			description="Использовать в карточке товара"
+			filter="">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+   </field>
+		<field name="spacer_03" type="spacer" default="" label="Параметры для Карточки товара" description=""/>
+		<field
+			name="zoom_type"
+			type="radio"
+			default="1"
+			label="Вид увеличения"
+			description="Вид увкличения изображения (отдельное окно, внутри окна, увеличительное стекло)"
+			filter="">
+			<option value="1">Снаружи</option>
+			<option value="2">Внутри</option>
+   <option value="3">Лупа</option>
+			</field>
+			
+			<field
+			name="zoom_start"
+			type="text"
+			default="3"
+			label="Начальное увеличение"
+			description="Начальное увеличение"
+			required="true"
+			filter="int"
+			size="20"
+			 />
+							
+		<field type="spacer" hr="true"/>
+		<field name="spacer_01" type="spacer" default="" label="Параметры для Вида увеличения - Снаружи:" description=""/>
+		<field
+			name="zoom_wind_width"
+			type="text"
+			default="350"
+			label="Ширина окна"
+			description="Размер окна в px (только число)"
+			required="true"
+			filter="int"
+			size="40"
+			 />
+			<field
+			name="zoom_wind_height"
+			type="text"
+			default="350"
+			label="Высота окна"
+			description="Размер окна в px (только число)"
+			required="true"
+			filter="int"
+			size="40"
+			 />
+				
+			<field
+			name="zoom_wind_pos"
+			type="radio"
+			default="1"
+			label="Положение окна"
+			description="Положжение окна (справа, слева)"
+			filter="">
+			<option value="1">Справа</option>
+			<option value="2">Слева</option>
+   </field>	
+			
+			<field
+			name="zoom_wind_title"
+			type="radio"
+			default="1"
+			label="Описание изображения"
+			description="Показать / скрыть описание изображения (только для вида окна - снаружи)"
+			filter="">
+			<option value="1">Показать</option>
+			<option value="2">Скрыть</option>
+   </field>	
+							
+			<field type="spacer" hr="true"/>
+		 <field name="spacer_02" type="spacer" default="" label="Параметры для Вида увеличения - Лупа:" description=""/>
+			<field
+			name="lens_size"
+			type="text"
+			default="100"
+			label="Размер увеличительного стекла"
+			description="Размер увеличительного стекла в px (только число)"
+			required="true"
+			filter="int"
+			size="20"
+			 />
+				
+				<field  
+				name="donate" 
+				type="donate" 
+				size="" 
+				default=""                    
+				label="Оплата за труд" 
+				description="Если вам нравится данное расширение, то у вас есть отличная возможность отблагодарить разработчика. Все вопросы можно задавать на сайте brooksite.ru, joomlaforum.ru или по электронной почте admin@brooksite.ru" 
+				addfieldpath="/plugins/jshoppingproducts/jqzoom/element"/>
+				
+		</fieldset>
+	</fields>
+	</config>		
+</extension>
