@@ -389,4 +389,7 @@
 	.title_order{
 		font-size: 18px;
 	}
+	.wrapper_search {
+		display: none;
+	}
 }
