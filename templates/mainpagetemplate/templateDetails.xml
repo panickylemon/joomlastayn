@@ -11,6 +11,7 @@
 	<version>3.1.0</version>
 	<description>TPL_MAINPAGETEMPLATE_XML_DESCRIPTION</description>
 
+
    <files>
         <folder>html</folder>
         <folder>css</folder>
