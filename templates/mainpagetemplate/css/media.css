@@ -302,7 +302,12 @@
 	#contact{
 		padding: 20px 8px !important;
 	}
-
+	.purse_main_categories{
+		margin-bottom: 2px;
+	}
+	.wrap_feedback_form{
+		margin:  2px auto 0;
+	}
 }
 
 
