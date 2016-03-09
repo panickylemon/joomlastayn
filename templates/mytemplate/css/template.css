@@ -60,7 +60,7 @@ body {
 	display: none;
 }
 
-input, textarea{
+input[type="text"],input[type="password"], textarea{
 	border-radius: 0 !important;
 	-webkit-border-radius: 0 !important;
 	-o-border-radius: 0 !important;
