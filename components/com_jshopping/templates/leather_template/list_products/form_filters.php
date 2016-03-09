@@ -32,7 +32,14 @@ defined('_JEXEC') or die('Restricted access');
                 Показывать
             </div>
             <div class="controls">
-                <?php echo $this->product_count?>
+                <select id="limit" name="limit" class="inputbox" onchange="submitListProductFilters()">
+                    <option value="">---</option>
+                    <option value="9">9</option>
+                    <option value="21">21</option>
+                    <option value="42">42</option>
+                    <option value="99">99</option>
+                    <option value="99999">all</option>
+                </select>
             </div>
         </div>
     <?php endif; ?>
