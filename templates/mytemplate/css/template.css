@@ -119,6 +119,11 @@ a{
 	border: 1px solid #ff3304 !important;
 }
 
+.error_page{
+	font-family: "OpenSansCond-Bold";
+	font-size: 22px;
+}
+
 	/*header*/
 .main-navigation {
 	display: none;
