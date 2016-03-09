@@ -337,6 +337,7 @@ header {
 
 /*footer*/
 footer {
+	max-width: 1200px;
 	position: absolute;
 	bottom: 0;
 	text-align: center;
