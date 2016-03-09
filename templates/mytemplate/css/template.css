@@ -770,6 +770,9 @@ img.jshop_img {
 	font-weight: 900;
 	font-size: 24px;
 }
+.jshop_prod_description span{
+	font-family: OpenSansCond;
+}
 .wrapper_description_product #block_price{
 	font-family: "OpenSansCond-Bold", sans-serif;
 	color: #656565;
