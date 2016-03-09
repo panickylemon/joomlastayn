@@ -120,6 +120,13 @@ a{
 }
 
 /*header*/
+.cart_header{
+	white-space:nowrap;
+}
+
+.cart_header span{
+	white-space:nowrap;
+}
 .main-navigation {
 	display: none;
 }
