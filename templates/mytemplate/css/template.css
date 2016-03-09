@@ -69,6 +69,10 @@ input, textarea{
 	-webkit-appearance: none;
 }
 
+input[type="radio"] {
+	-webkit-appearance: radio;
+}
+
 .wrapper {
 	position: relative;
 	min-height: 100%;
