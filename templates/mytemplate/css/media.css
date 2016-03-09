@@ -132,6 +132,9 @@
 	.cart_step{
 		padding: 15px 8px 0;
 	}
+	.finish_block{
+		padding-left: 8px;
+	}
 	.address_block{
 		padding: 0px 8px 0;
 	}
@@ -391,5 +394,12 @@
 	}
 	.wrapper_search {
 		display: none;
+	}
+	#shipping_form label{
+		margin-left: 17px;
+		margin-top: -15px;
+	}
+	#shipping_form input{
+		margin-top: 0px;
 	}
 }
