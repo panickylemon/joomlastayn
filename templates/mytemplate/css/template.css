@@ -60,7 +60,7 @@ body {
 	display: none;
 }
 
-input{
+input, textarea{
 	border-radius: 0 !important;
 	-webkit-border-radius: 0 !important;
 	-o-border-radius: 0 !important;
