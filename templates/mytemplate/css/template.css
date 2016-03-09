@@ -66,6 +66,7 @@ input{
 	-o-border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
 	-khtml-border-radius: 0 !important;
+	-webkit-appearance: none;
 }
 
 .wrapper {
