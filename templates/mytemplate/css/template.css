@@ -120,7 +120,12 @@ a{
 }
 
 .error_page{
+	padding-top: 20px;
 	font-family: "OpenSansCond-Bold";
+	font-size: 19px;
+}
+
+.error_page h1{
 	font-size: 22px;
 }
 
