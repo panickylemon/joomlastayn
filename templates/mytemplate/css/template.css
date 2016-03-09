@@ -336,8 +336,11 @@ header {
 }
 
 /*footer*/
-footer {
+.wrap_content_all_page footer{
 	max-width: 1200px;
+}
+
+footer {
 	position: absolute;
 	bottom: 0;
 	text-align: center;
