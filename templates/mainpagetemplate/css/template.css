@@ -65,6 +65,10 @@ input, textarea{
 	-webkit-appearance: none;
 }
 
+input[type="radio"] {
+	-webkit-appearance: radio;
+}
+
 .edit-icon {
 	display: none;
 }
