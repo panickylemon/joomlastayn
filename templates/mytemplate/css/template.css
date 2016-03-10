@@ -1267,6 +1267,10 @@ div.jshop_register{
 
 /*contacts*/
 
+#contact {
+	padding: 10px 0;
+}
+
 .item-page .wrap_contacts{
 	line-height: 1.2;
 	float: right;
@@ -1307,6 +1311,7 @@ div.jshop_register{
 .feedback_border{
 	border: 1px solid #000000;
 	padding: 0 20px;
+	margin-top: 10px;
 }
 
 .contacts_feedback .title_feedback{
