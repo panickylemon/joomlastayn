@@ -1,6 +1,6 @@
 <div class="feedback_border">
 
-	<h2 class="title_feedback">Форма обратной связи</h2>
+	<p class="title_feedback">Форма обратной связи</p>
 
 	<?php
 	/**

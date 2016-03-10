@@ -1309,7 +1309,7 @@ div.jshop_register{
 	padding: 0 20px;
 }
 
-.contacts_feedback h2{
+.contacts_feedback .title_feedback{
 	font-size: 18px;
 	font-family: "OpenSansCond-Bold";
 }
