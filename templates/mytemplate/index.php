@@ -29,10 +29,6 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 	        src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js">
 	</script>
 
-	<script type="text/javascript" charset="utf-8"
-	        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=859iOciZtdumK_UA6kdjkPHqfyt3oBEW&width=100%&height=350&id=map_office">
-	</script>
-
 	<jdoc:include type="head"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
