@@ -10,7 +10,7 @@ function isEmptyValue(value){
 <input type = "hidden" name = "category_id" value = "<?php print $category_id?>" />
 <input type = "hidden" name = "search_type" value = "<?php print $search_type;?>" />
 <input src="/joomlastayn/templates/mytemplate/images/glass.png" id="glass" class = "button button_search" type =
-    "image" value=" " />
+    "image" alt="поиск" />
 <p class="inputbox_wrap"><input type = "text" class = "inputbox" name = "search"  id =
 "jshop_search" value = "<?php print $search?>" /></p>
 <?php if ($adv_search) {?>
