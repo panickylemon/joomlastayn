@@ -224,7 +224,7 @@
 							       for="inputName"><?php echo $params->get('ffield_name'); ?></label>
 
 							<div class="controls">
-								<input class="input-80" name="name" value="name" alt="имя" type="text" id="inputName"
+								<input class="input-80" name="name" value="name" type="text" id="inputName"
 								       autocomplete="off"
 								       placeholder="<?php echo $params->get('ffield_name'); ?>" required>
 
