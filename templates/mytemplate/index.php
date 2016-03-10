@@ -23,7 +23,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 ?>
 
 <!DOCTYPE html>
-<html xmlns:jdoc="http://www.w3.org/2001/XInclude">
+<html>
 <head>
 	<script type="text/javascript"
 	        src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js">
