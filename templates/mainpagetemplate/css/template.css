@@ -451,6 +451,10 @@ footer {
 
 /*main_image*/
 
+.title_index{
+	position: absolute;
+}
+
 .main_img img {
 	width: 100%;
 	max-width: 1370px;

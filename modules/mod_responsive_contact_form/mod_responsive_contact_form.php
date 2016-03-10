@@ -224,7 +224,8 @@
 							       for="inputName"><?php echo $params->get('ffield_name'); ?></label>
 
 							<div class="controls">
-								<input class="input-80" name="name" type="text" id="inputName" autocomplete="off"
+								<input class="input-80" name="name" value="name" alt="имя" type="text" id="inputName"
+								       autocomplete="off"
 								       placeholder="<?php echo $params->get('ffield_name'); ?>" required>
 
 								<p class="help-block"></p>
@@ -303,7 +304,7 @@
 
 						<div class="controls">
 			  <textarea class="input-80" name="message" rows="12" id="inputMessage" placeholder="Ваше сообщение"
-			            autocomplete="off"
+
 			            minlength="<?php
 			            echo $params->get('msg_minlength'); ?>" required></textarea>
 
