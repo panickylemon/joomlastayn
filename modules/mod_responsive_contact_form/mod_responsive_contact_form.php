@@ -181,7 +181,7 @@
 		}
 	}
 	?>
-	<section id="contact">
+	<div id="contact">
 		<script type="text/javascript">
 			var RecaptchaOptions = {
 				theme: "<?php echo $params->get('captcha_theme');?>"
@@ -351,6 +351,6 @@
 				?>
 			</fieldset>
 		</form>
-	</section>
+	</div>
 
 </div>
