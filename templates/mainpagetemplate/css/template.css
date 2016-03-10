@@ -453,6 +453,9 @@ footer {
 
 .title_index{
 	position: absolute;
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
 }
 
 .main_img img {
