@@ -1268,7 +1268,7 @@ div.jshop_register{
 /*contacts*/
 
 #contact {
-	padding: 10px 0;
+	padding: 10px 0 !important;
 }
 
 .item-page .wrap_contacts{
@@ -1277,7 +1277,7 @@ div.jshop_register{
 	width: 49%;
 	border: 0px solid #000000;
 	margin-bottom: 100px;
-	margin-top: 15px;
+	margin-top: 17px;
 	padding-left: 30px;
 }
 
