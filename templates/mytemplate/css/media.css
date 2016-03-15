@@ -159,7 +159,13 @@
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
+	}
 
+	.contacts_feedback .feedback_border{
+		 border: none;
+	}
+	.contacts_feedback #contact{
+		padding: 0;\0/;
 	}
 
 	.feedback_border{
@@ -338,6 +344,9 @@
 		padding-left: 0;
 	}
 	.feedback_border{
+		 padding: 0 8px;
+	 }
+	.contacts_feedback .feedback_border{
 		padding: 0 8px;
 	}
 }

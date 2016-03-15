@@ -14,7 +14,6 @@ $doc->addStyleSheet($template_url . '/css/media.css');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/bootstrap/js/bootstrap.min.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.reject.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.inputmask.bundle.js', 'text/javascript');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.placeholder.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/ie_message.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/main.js', 'text/javascript');
 

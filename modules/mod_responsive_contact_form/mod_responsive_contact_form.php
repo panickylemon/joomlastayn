@@ -258,7 +258,7 @@
 								       for="inputPhone"><?php echo $params->get('tfield_name'); ?></label>
 
 								<div class="controls">
-									<input class="input-80" name="phone" type="text" id="inputPhone" autocomplete="off"
+									<input class="input-80" name="phone" type="text" id="inputPhone" autocomplete="off" data-inputmask-regex="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
 									       placeholder="<?php echo $params->get('tfield_name'); ?>" <?php echo $params->get('phone_req'); ?>>
 
 									<p class="help-block"></p>

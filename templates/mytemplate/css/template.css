@@ -1301,6 +1301,16 @@ div.jshop_register{
 	display: none;
 }
 
+:root .contacts_feedback .control-label{
+	display: block\0/;
+	width: 100%\0/;
+}
+
+:root .contacts_feedback{
+	margin-bottom: 30px\0/;
+}
+
+
 .contacts_feedback{
 	float: left;
 	width: 45%;
@@ -1314,7 +1324,7 @@ div.jshop_register{
 }
 
 .contacts_feedback .title_feedback{
-	font-size: 18px;
+	font-size: 20px;
 	font-family: "OpenSansCond-Bold";
 	margin-top: 15px;
 }

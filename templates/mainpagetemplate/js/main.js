@@ -13,8 +13,8 @@ jQuery(document).ready(function($){
         $(".burger_menu_close").hide();
     });
 
-    $('input[type=text], textarea').placeholder();
     $("#inputName").inputmask("Regex");
+    $("#inputPhone").inputmask("Regex");
 
 });
 
