@@ -1308,15 +1308,15 @@ div.jshop_register{
 	margin-left: 10px;
 }
 
-.feedback_border{
+.contacts_feedback .feedback_border{
 	border: 1px solid #000000;
 	padding: 0 20px;
-	margin-top: 10px;
 }
 
 .contacts_feedback .title_feedback{
 	font-size: 18px;
 	font-family: "OpenSansCond-Bold";
+	margin-top: 15px;
 }
 
 .controls .input-80{
