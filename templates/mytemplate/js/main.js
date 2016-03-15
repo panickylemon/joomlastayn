@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
         $(".burger_menu_close").hide();
     });
 
-    $.html5support();
+    $('input[type=text], textarea').placeholder();
     $("#inputName").inputmask("Regex");
 
 
