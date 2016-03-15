@@ -227,7 +227,7 @@
 								<input class="input-80" name="name" type="text" id="inputName"
 								       autocomplete="off"
 								       placeholder="<?php echo $params->get('ffield_name'); ?>"
-								       data-inputmask-regex="[a-zA-ZА-Яа-яЁё]+" required>
+								       data-inputmask-regex="[А-Яа-яЁё]+" required>
 
 								<p class="help-block"></p>
 							</div>
@@ -258,7 +258,7 @@
 								       for="inputPhone"><?php echo $params->get('tfield_name'); ?></label>
 
 								<div class="controls">
-									<input class="input-80" name="phone" type="text" id="inputPhone" autocomplete="off" data-inputmask-regex="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+									<input class="input-80" name="phone" type="text" id="inputPhone" autocomplete="off"
 									       placeholder="<?php echo $params->get('tfield_name'); ?>" <?php echo $params->get('phone_req'); ?>>
 
 									<p class="help-block"></p>

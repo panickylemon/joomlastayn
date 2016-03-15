@@ -13,9 +13,9 @@ jQuery(document).ready(function($){
         $(".burger_menu_close").hide();
     });
 
-    $('input, textarea').placeholder();
+
     $("#inputName").inputmask("Regex");
-    $("#inputPhone").inputmask("Regex");
+    $.html5support();
 });
 
 
