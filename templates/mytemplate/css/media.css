@@ -136,7 +136,7 @@
 		padding-left: 8px;
 	}
 	.address_block{
-		padding: 0px 8px 0;
+		padding: 0 8px 0;
 	}
 	.title_order{
 		margin-top: 10px;
@@ -163,9 +163,6 @@
 
 	.contacts_feedback .feedback_border{
 		 border: none;
-	}
-	.contacts_feedback #contact{
-		padding: 0;\0/;
 	}
 
 	.feedback_border{

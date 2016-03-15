@@ -31,6 +31,9 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<!--[if IE 9]>
+	<link href="/joomlastayn/templates/mainpagetemplate/css/ie.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
 	<script type="text/javascript">jQuery.noConflict();</script>
 </head>
 <body>

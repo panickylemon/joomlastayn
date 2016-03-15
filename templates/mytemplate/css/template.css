@@ -1302,20 +1302,6 @@ div.jshop_register{
 	display: none;
 }
 
-:root .contacts_feedback .control-label{
-	display: block\0/;
-	width: 100%\0/;
-}
-
-:root .contacts_feedback{
-	margin-bottom: 30px\0/;
-}
-
-:root #contact {
-	padding: 0 !important;
-}
-
-
 .contacts_feedback{
 	float: left;
 	width: 45%;
