@@ -15,6 +15,7 @@ $doc->addStyleSheet($template_url . '/owl-carousel/assets/owl.carousel.css');
 $doc->addStyleSheet($template_url . '/owl-carousel/assets/owl.theme.css');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/bootstrap/js/bootstrap.min.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.reject.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.placeholder.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/ie_message.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/main.js', 'text/javascript');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/owl-carousel/owl.carousel.min.js', 'text/javascript');

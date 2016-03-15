@@ -12,6 +12,8 @@ jQuery(document).ready(function($){
         $(".burger_menu").show();
         $(".burger_menu_close").hide();
     });
+
+    $('input, textarea').placeholder();
 });
 
 
