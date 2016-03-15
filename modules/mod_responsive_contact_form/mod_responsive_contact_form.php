@@ -227,7 +227,7 @@
 								<input class="input-80" name="name" type="text" id="inputName"
 								       autocomplete="off"
 								       placeholder="<?php echo $params->get('ffield_name'); ?>"
-								       data-inputmask-regex="[А-Яа-яЁё]+" required>
+								       data-inputmask-regex="[a-zA-ZА-Яа-яЁё]+" required>
 
 								<p class="help-block"></p>
 							</div>
