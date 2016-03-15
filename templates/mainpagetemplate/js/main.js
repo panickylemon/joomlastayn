@@ -14,6 +14,8 @@ jQuery(document).ready(function($){
     });
 
     $('input, textarea').placeholder();
+    $("#inputName").inputmask("Regex");
+    $("#inputPhone").inputmask("Regex");
 });
 
 
