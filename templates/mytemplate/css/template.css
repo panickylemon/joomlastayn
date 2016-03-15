@@ -1311,6 +1311,10 @@ div.jshop_register{
 	margin-bottom: 30px\0/;
 }
 
+:root #contact {
+	padding: 0 !important;
+}
+
 
 .contacts_feedback{
 	float: left;
