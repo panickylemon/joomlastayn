@@ -27,6 +27,7 @@ $is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
 	        src="<?php echo $this->baseurl ?>/templates/mytemplate/js/jquery-1.12.0.min.js"></script>
 	<jdoc:include type="head"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/joomlastayn/templates/mainpagetemplate/images/favicon.png" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
