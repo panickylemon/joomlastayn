@@ -681,9 +681,11 @@ footer {
 }
 .form-horizontal .box_products_sorting .controls .inputbox {
 	width: 100px;
+	padding-left: 5px;
 }
 .form-horizontal .box_products_count_to_page .controls .inputbox {
 	width: 41px;
+	padding-left: 5px;
 }
 .block_sorting_count_to_page select {
 	height: 25px;
