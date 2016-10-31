@@ -264,6 +264,11 @@
 		line-height: 1;
 		padding-bottom: 0;
 	}
+
+	.main_img {
+		margin-top: -5px;
+	}
+
     .image_hedden_xs{
 	    display: none;
     }
