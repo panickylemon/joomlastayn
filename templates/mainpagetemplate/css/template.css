@@ -162,6 +162,10 @@ a{
 	color: #ffffff;
 }
 
+.col_main_categories img{
+	position: relative;
+}
+
 .red_border{
 	border: 1px solid #ff3304 !important;
 }
