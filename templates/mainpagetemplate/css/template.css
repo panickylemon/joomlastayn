@@ -164,7 +164,7 @@ a{
 	font-family: "PTSansNarrow";
 	transform: translate(-50%, -50%);
 	text-align: center;
-	font-size: 40px;
+	font-size: 44px;
 }
 
 .background_main_categories{
@@ -178,12 +178,12 @@ a{
 }
 
 .col_main_categories img:hover{
-	opacity: 0.4;
-	-webkit-transform: opacity 0.5s;
-	-moz-transform: opacity 0.5s;
-	-ms-transform: opacity 0.5s;
-	-o-transform: opacity 0.5s;
-	transition: opacity 0.5s;
+	opacity: 0.2;
+	-webkit-transform: opacity 0.3s;
+	-moz-transform: opacity 0.3s;
+	-ms-transform: opacity 0.3s;
+	-o-transform: opacity 0.3s;
+	transition: opacity 0.3s;
 }
 
 .red_border{
