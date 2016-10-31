@@ -159,6 +159,10 @@ a{
 	position: absolute;
 	z-index: 998;
 	color: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .col_main_categories img{
@@ -252,9 +256,7 @@ header {
 	color: #303030;
 	text-decoration: underline;
 }
-.count_cart_header {
-	padding-top: 0px;
-}
+
 .basket_header img {
 	width: 22px;
 	padding-right: 5px;
@@ -269,7 +271,6 @@ header {
 	font-family: "OpenSansCond-Bold", sans-serif;
 }
 .nav {
-	border: 0px solid #ccff2d;
 	text-align: center;
 	width: 100%;
 	max-width: 900px;
@@ -301,7 +302,6 @@ header {
 	list-style: none;
 	zoom: 1;
 	*display: inline;
-	border: 0px solid red;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -320,7 +320,6 @@ header {
 }
 .logo {
 	display: inline-block;
-	border: 0px solid #6e62ff;
 	width: 15%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -408,7 +407,6 @@ footer {
 	-webkit-box-sizing: border-box;
 }
 .footer_border_top{
-	/*border-top: 2px solid #515151;*/
 	max-width: 1200px;
 	margin: auto;
 }
