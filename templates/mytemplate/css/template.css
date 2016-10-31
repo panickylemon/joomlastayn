@@ -60,7 +60,7 @@ body {
 	display: none;
 }
 
-input[type="text"],input[type="password"], textarea{
+input[type="text"],input[type="password"], textarea, select{
 	border-radius: 0 !important;
 	-webkit-border-radius: 0 !important;
 	-o-border-radius: 0 !important;
@@ -68,6 +68,8 @@ input[type="text"],input[type="password"], textarea{
 	-khtml-border-radius: 0 !important;
 	-webkit-appearance: none;
 }
+
+
 
 input[type="radio"] {
 	-webkit-appearance: radio;
