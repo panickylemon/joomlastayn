@@ -873,6 +873,7 @@ div.jshop_prod_attributes select, .jshop .prod_qty_input input{
 	text-overflow: '';
 	-ms-appearance: none;
 	appearance: none !important;
+	border: 1px solid #b9b8b8;
 }
 .productfull{
 	margin-bottom: 50px;
