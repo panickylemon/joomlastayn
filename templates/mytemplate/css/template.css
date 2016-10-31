@@ -865,7 +865,14 @@ div.jshop_prod_attributes{
 }
 div.jshop_prod_attributes select, .jshop .prod_qty_input input{
 	outline: none;
-	background: white;
+	background: url(/joomlastayn/templates/mytemplate/images/arrow-black.png) white no-repeat 94%;
+	background-size: 11px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	-ms-appearance: none;
+	appearance: none !important;
 }
 .productfull{
 	margin-bottom: 50px;
