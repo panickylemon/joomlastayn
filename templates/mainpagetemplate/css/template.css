@@ -453,12 +453,19 @@ footer {
 
 .title_index{
 	position: absolute;
-	-moz-opacity: 0;
-	-khtml-opacity: 0;
-	opacity: 0;
+	color: #ffffff;
+	z-index: 998;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.main_img{
+	position: relative;
 }
 
 .main_img img {
+	position: relative;
 	width: 100%;
 	max-width: 1370px;
 	margin: -10px auto 5px;
