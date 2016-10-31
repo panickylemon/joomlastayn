@@ -173,7 +173,12 @@ a{
 
 .col_main_categories img{
 	position: relative;
-	opacity: 0.7;
+	opacity: 0.6;
+}
+
+.col_main_categories img:hover{
+	-webkit-filter: grayscale(0.7);
+	filter: grayscale(0.7);
 }
 
 .red_border{
