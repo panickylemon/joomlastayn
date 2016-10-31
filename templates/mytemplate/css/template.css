@@ -205,13 +205,11 @@ header {
 	border-bottom: 1px solid #979797;
 }
 .inputbox_wrap{
-	border-bottom: 0px solid #979797;
 	display: inline-block;
 	vertical-align: bottom;
 	height: 21px;
 }
 .basket_header {
-	border: 0px solid #ccff2d;
 	margin-right: 5px;
 	margin-top: 1px;
 }
@@ -224,9 +222,7 @@ header {
 	color: #303030;
 	text-decoration: underline;
 }
-.count_cart_header {
-	padding-top: 0px;
-}
+
 .basket_header img {
 	width: 22px;
 	padding-right: 5px;
