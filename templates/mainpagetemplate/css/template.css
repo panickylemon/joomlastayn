@@ -177,8 +177,13 @@ a{
 }
 
 .col_main_categories img:hover{
-	-webkit-filter: grayscale(1);
-	filter: grayscale(1);
+	/*-webkit-filter: grayscale(1);*/
+	/*filter: grayscale(1);*/
+	/*-webkit-transform: all 0.7s linear 0s;*/
+	/*-moz-transform: all 0.7s linear 0s;*/
+	/*-ms-transform: all 0.7s linear 0s;*/
+	/*-o-transform: all 0.7s linear 0s;*/
+	opacity: 0.4;
 	transition: all 0.7s linear 0s;
 }
 
