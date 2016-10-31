@@ -152,9 +152,9 @@ a{
 .image_upper {
 	position: relative;
 }
-.image_upper:hover {
-	opacity: 0;
-}
+/*.image_upper:hover {*/
+	/*opacity: 0;*/
+/*}*/
 .red_border{
 	border: 1px solid #ff3304 !important;
 }
