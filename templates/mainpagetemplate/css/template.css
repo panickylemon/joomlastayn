@@ -158,7 +158,6 @@ a{
 .title_categories{
 	position: absolute;
 	z-index: 998;
-	display: inline-block;
 	color: #ffffff;
 }
 
