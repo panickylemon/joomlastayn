@@ -163,6 +163,11 @@ a{
 	left: 50%;
 	font-family: "PTSansNarrow";
 	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 	text-align: center;
 	font-size: 44px;
 }
@@ -513,6 +518,11 @@ footer {
 	left: 50%;
 	margin: 0;
 	padding-bottom: 30px;
+	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
