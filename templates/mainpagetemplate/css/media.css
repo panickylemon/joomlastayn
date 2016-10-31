@@ -27,6 +27,12 @@
 	.address_block input[type="text"]{
 		width: 100%;
 	}
+	.title_categories {
+		font-size: 38px;
+	}
+	.title_index {
+		font-size: 68px;
+	}
 }
 
 @media screen and (max-width: 900px) {
