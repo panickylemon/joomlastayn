@@ -215,6 +215,9 @@
 	.title_categories {
 		font-size: 28px;
 	}
+	.title_index {
+		font-size: 52px;
+	}
 }
 
 
@@ -250,6 +253,15 @@
 	}
 	.right_col_main_categories {
 		width: 100%;
+	}
+
+	.title_categories {
+		font-size: 38px;
+	}
+
+	.title_index {
+		font-size: 44px;
+		line-height: 1;
 	}
 }
 
