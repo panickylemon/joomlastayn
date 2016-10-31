@@ -173,6 +173,7 @@ a{
 
 .col_main_categories img{
 	position: relative;
+	opacity: 0.5;
 }
 
 .red_border{
