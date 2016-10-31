@@ -263,6 +263,13 @@
 		font-size: 44px;
 		line-height: 1;
 	}
+    .image_hedden_xs{
+	    display: none;
+    }
+
+	.image_mobile{
+		display: block;
+	}
 }
 
 

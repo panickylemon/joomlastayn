@@ -517,6 +517,10 @@ footer {
 	text-align: center;
 }
 
+.image_mobile{
+	display: none;
+}
+
 .main_img{
 	position: relative;
 }
