@@ -178,11 +178,11 @@ a{
 
 .col_main_categories img:hover{
 	opacity: 0.4;
-	-webkit-transform: opacity 0.7s;
-	-moz-transform: opacity 0.7s;
-	-ms-transform: opacity 0.7s;
-	-o-transform: opacity 0.7s;
-	transition: opacity 0.7s;
+	-webkit-transform: opacity 0.5s;
+	-moz-transform: opacity 0.5s;
+	-ms-transform: opacity 0.5s;
+	-o-transform: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 .red_border{
