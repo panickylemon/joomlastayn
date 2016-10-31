@@ -155,6 +155,12 @@ a{
 /*.image_upper:hover {*/
 	/*opacity: 0;*/
 /*}*/
+.title_categories{
+	position: absolute;
+	z-index: 998;
+	color: #ffffff;
+}
+
 .red_border{
 	border: 1px solid #ff3304 !important;
 }
